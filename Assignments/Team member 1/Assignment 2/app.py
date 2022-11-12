@@ -12,9 +12,9 @@ con.close()
 def home():
    return render_template('HOME.html')
 
-@app.route('/PROFILE')
+@app.route('/profile')
 def profile():
-   return render_template('PROFILE.html')
+   return render_template('profile.html')
 
 @app.route('/about')
 def about():
