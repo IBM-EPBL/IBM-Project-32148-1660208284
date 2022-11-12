@@ -10,7 +10,7 @@ con.close()
 
 @app.route('/')
 def home():
-   return render_template('HOME.html')
+   return render_template('home.html')
 
 @app.route('/profile')
 def profile():
