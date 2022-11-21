@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Charis+SIL:ital,wght@0,400;0,700;1,400;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+
+    <!-- CSS only -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+<!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>  
+    <title>Register</title>
+</head>
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: 'Charis SIL', serif;
+}
+.image-responsive{
+    width:100%;
+}
+
+.nav{
+    display:flex;
+    justify-content:space-around;
+    align-items:center;
+    right: 0px;
+    height:60px;
+    background-color:#cccccc;
+    position:fixed;
+    z-index:1;
+    width:100%;
+    transition:0.2s;
+}
+
+
+/*.logo{
+  top: 100px;
+    z-index:1;
+}
+
+.logo img{
+    align-items:center;
+    width:150px;
+}*/
+
+
+@media screen and (max-width:768px) {
+    html, body {
+        position: relative;
+    }
+#mynav {
+    top:0px !important;
+}
+}
+
+/* page content*/
+
+@media (min-width: 1025px) {
+    .h-custom {
+    height: 155vh !important;
+    }
+    }
+    .card-registration .select-input.form-control[readonly]:not([disabled]) {
+    font-size: 1rem;
+    line-height: 2.15;
+    padding-left: .75em;
+    padding-right: .75em;
+    }
+    .card-registration .select-arrow {
+    top: 13px;
+    }
+    
+    .gradient-custom-2 {
+    /* fallback for old browsers */
+    background-color: #cccccc;
+    
+    /* Chrome 10-25, Safari 5.1-6 */
+    background-color: #cccccc;
+    
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background-color: #cccccc;
+    }
+    
+    .bg-indigo {
+      background-color:#595959;
+    }
+    @media (min-width: 992px) {
+    .card-registration-2 .bg-indigo {
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    }
+    }
+    @media (max-width: 991px) {
+    .card-registration-2 .bg-indigo {
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    }
+    }
+    
+    .design input:focus ~ label,
+    .design input:valid ~ label,
+    textarea:valid~ label,
+    textarea:focus~ label
+    /* body select:focus ~ label,
+    body select:valid ~ label*/ {
+      color:#cccccc;
+      font-size: 20px;
+      border-bottom:2px solid #cccccc;
+      border-bottom-style: groove;
+      box-shadow:5px 15px 25px #595959;
+      border-radius: 8px;
+      width: max-content;
+    }
+    
+     .design1 input:focus ~ label,
+     .design1 input:valid ~ label,
+    body select:focus ~ label
+    /* body select:valid ~ label*/ {
+      color : #595959;
+      font-size: 20px;
+      border-bottom:2px solid #cccccc;
+      border-bottom-style: groove;
+      box-shadow:5px 15px 25px #cccccc ;
+      border-radius: 8px;
+      width: max-content;
+    }
+    /*heading*/
+    
+    @keyframes float {
+      0% {
+        box-shadow: 0 5px 15px 0px #595959(0.6);
+        transform: translatey(0px);
+      }
+      50% {
+        box-shadow: 0 25px 15px 0px #595959(0.2);
+        transform: translatey(-20px);
+      }
+      100% {
+        box-shadow: 0 5px 15px 0px #595959(0.6);
+        transform: translatey(0px);
+      }
+    }
+    
+    .contain {
+      display: flex;
+      flex-direction: column;
+    }
+    
+.ava {
+      width: 260px;
+      height: 40px;
+      box-sizing: border-box;
+      color:#595959;
+      
+    
+}
+    @keyframes float {
+      0% {
+        box-shadow: 0 5px 15px 0px #595959(0.6);
+        transform: translatey(0px);
+      }
+      50% {
+        box-shadow: 0 25px 15px 0px #595959(0.2);
+        transform: translatey(-20px);
+      }
+      100% {
+        box-shadow: 0 5px 15px 0px #595959(0.6);
+        transform: translatey(0px);
+      }
+    }
+    
+    .containers {
+      display: flex;
+      flex-direction: column;
+    }
+    
+    .avatar {
+      width: 260px;
+      height: 40px;
+      box-sizing: border-box;
+      color: #595959;
+      border-bottom: 2px #595959;
+      background-color:  #595959;
+      border-radius: 40px;
+      overflow: hidden;
+      box-shadow: 0 5px 15px 0px #595959;
+      transform: translatey(0px);
+      animation: float 6s ease-in-out infinite;
+    }
+    
+    /* submit btn*/
+    .sub a {
+      position: relative;
+      display: inline-block;
+      padding: 10px 20px;
+      color: #cccccc;
+      font-size: 16px;
+      text-decoration: none;
+      text-transform: uppercase;
+      overflow: hidden;
+      transition: .5s;
+      margin-top: -10px;
+      letter-spacing: 4px;
+      left: 80%;
+    }
+    
+    .sub a:hover {
+      background:#cccccc ;
+      color:#595959 ;
+      border-radius: 5px;
+      box-shadow: 0 0 5px #595959,
+                  0 0 25px #595959,
+                  0 0 50px #595959,
+                  0 0 100px #595959;
+    }
+    
+    .sub a span {
+      position: absolute;
+      display: block;
+    }
+    
+    .sub a span:nth-child(1) {
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 2px;
+      background: linear-gradient(90deg, transparent, #EFE9CE);
+      animation: btn-anim1 1s linear infinite;
+    }
+    
+    @keyframes btn-anim1 {
+      0% {
+        left: -100%;
+      }
+      50%,100% {
+        left: 100%;
+      }
+    }
+    
+    .sub a span:nth-child(2) {
+      top: -100%;
+      right: 0;
+      width: 2px;
+      height: 100%;
+      background: linear-gradient(180deg, transparent, #EFE9CE);
+      animation: btn-anim2 1s linear infinite;
+      animation-delay: .25s
+    }
+    
+    @keyframes btn-anim2 {
+      0% {
+        top: -100%;
+      }
+      50%,100% {
+        top: 100%;
+      }
+    }
+    
+    .sub a span:nth-child(3) {
+      bottom: 0;
+      right: -100%;
+      width: 100%;
+      height: 2px;
+      background: linear-gradient(270deg, transparent, #cccccc);
+      animation: btn-anim3 1s linear infinite;
+      animation-delay: .5s
+    }
+    
+    @keyframes btn-anim3 {
+      0% {
+        right: -100%;
+      }
+      50%,100% {
+        right: 100%;
+      }
+    }
+    
+    .sub a span:nth-child(4) {
+      bottom: -100%;
+      left: 0;
+      width: 2px;
+      height: 100%;
+      background: linear-gradient(360deg, transparent,#cccccc);
+      animation: btn-anim4 1s linear infinite;
+      animation-delay: .75s
+    }
+    
+    @keyframes btn-anim4 {
+      0% {
+        bottom: -100%;
+      }
+      50%,100% {
+        bottom: 100%;
+      }
+    }
+    @media screen and (max-width: 430px) {
+      .sub a{
+        left: 65%;
+      }
+      
+    }
+
+</style>
+<body>
+  
+        <div class="nav" id="mynav">
+            <div class="logo" style="margin-top: -40px;">
+                <a href="=#">
+                </a>
+            </div>
+        </div><br>
+    
+        <section class="h-100 h-custom gradient-custom-2">
+            <div class="container py-5 h-100">
+              <div class="row d-flex justify-content-center align-items-center h-100">
+                <div class="col-12" style="box-shadow: 0 15px 25px #cccccc; padding-left: 0%; padding-right: 0%;border-radius: 20px;">
+                  <div class="card card-registration card-registration-2" style="border-radius: 15px;">
+                    <div class="card-body p-0">
+                      <div class="row g-0">
+                        <div class="col-lg-6">
+                          <div class="p-5">
+                            <div class="contain">
+                              <div class="ava">
+                                  <h3 class="fw-normal mb-5" style="margin-top: -1px; margin-left:10px;">Personal Details</h3>
+                              </div>
+                            </div><br>
+                            
+                            <div class="row">
+                              <div class="col-md-6 mb-4 pb-2">
+          
+                                <div class="form-outline">
+                                  <input type="text" id="form3Examplev2" class="form-control form-control-lg" required/>
+                                  <label class="form-label" for="form3Examplev2">First Name</label>
+                                </div>
+          
+                              </div>
+                              <div class="col-md-6 mb-4 pb-2">
+          
+                                <div class="form-outline">
+                                  <input type="text" id="form3Examplev3" class="form-control form-control-lg" required/>
+                                  <label class="form-label" for="form3Examplev3">Last Name</label>
+                                </div>
+          
+                              </div>
+                            </div>   
+                            <div class="design">
+                              <div class="mb-4 pb-2">
+                                  <input class="form-control" type="file" id="formFile" required>
+                                  <label for="formFile" class="form-label">Photo</label>
+                               </div>
+
+                            <div class="row">
+                              <div class="col-md-6 mb-4 pb-2">
+          
+                                <div class="form-outline">
+                                  <input type="date" id="form3Examplev2" class="form-control form-control-lg" required/>
+                                  <label class="form-label" for="form3Examplev2">DOB</label>
+                                </div>
+          
+                              </div>
+                              <div class="col-md-6 mb-4 pb-2">
+                                <select id="form3Examplev4" class="form-control form-control-lg" required/>
+                              <option value="1">Select</option>
+                              <option value="2">Male</option>
+                              <option value="3">Female</option>
+                              <option value="4">Others</option>
+                        
+                            </select>
+                            <label class="form-label" for="form3Examplev4">Gender</label>
+                              </div>
+                            </div>   
+                            
+                            <div class="mb-4 pb-2">
+                              <div class="form-outline">
+                                <input type="email" id="form3Examplev4" class="form-control form-control-lg" required/>
+                                <label class="form-label" for="form3Examplev4">Email</label>
+                              </div>
+                            </div>
+          
+                            <div class="mb-4 pb-2">
+                              <div class="form-outline">
+                                <input type="password" id="form3Examplev4" class="form-control form-control-lg" required />
+                                <label class="form-label" for="form3Examplev4">Password</label>
+                              </div>
+                            </div>
+
+                            <div class="mb-4 pb-2">
+                              <div class="form-outline">
+                                <input type="text" id="form3Examplev3" class="form-control form-control-lg" required/>
+                                <label class="form-label" for="form3Examplev3">Phone number</label>
+                              </div> 
+                          </div>
+
+
+                            <div class="mb-4 pb-2">
+                              <div class="form-outline">
+                                <textarea type="text" id="form3Examplev4" class="form-control form-control-lg" rows="3" cols="50" required></textarea>
+                                <label class="form-label" for="form3Examplev4">Address</label>
+                              </div>
+                            </div>
+                          </div>
+                          </div>
+                        </div>
+                        <div class="col-lg-6 bg-indigo text-white">
+                          <div class="p-5">
+                            <div class="containers">
+                              <div class="avatar">
+                                  <h3 class="fw-normal mb-5" style="margin-top: -1px; margin-left:10px;">Academic Details</h3>
+                              </div>
+                            </div><br>
+                            <div class="design1">
+                            <div class="mb-4 pb-2">
+                                <input class="form-control" type="file" id="formFile" required>
+                                <label for="formFile" class="form-label">Upload Resume</label>
+                             </div>
+          
+                             <div class="mb-4 pb-2">
+                              <select id="form3Examplev4" class="form-control form-control-lg" required/>
+                              <option value="1">Select</option>
+                              <option value="2">High School</option>
+                              <option value="3">Diploma</option>
+                              <option value="4">UG</option>
+                              <option value="5">PG</option>
+                            </select>
+                            <label class="form-label" for="form3Examplev4">Highest Qualification</label>
+                          </div>
+
+                          <div class="row">
+                            <div class="col-md-5 mb-4 pb-2">
+        
+                              <div class="form-outline form-white">
+                                <select id="form3Examplev4" class="form-control form-control-lg" required/>
+                              <option value="1">Select</option>
+                              <option value="2">B.E</option>
+                              <option value="3">B.Tech</option>
+                              <option value="4">M.E</option>
+                              <option value="5">M.Tech</option>
+                              <option value="6">Others</option>
+                            </select>
+                                <label class="form-label" for="form3Examplea4">Degree</label>
+                              </div>
+        
+                            </div>
+                            <div class="col-md-7 mb-4 pb-2">
+        
+                              <div class="form-outline form-white">
+                                <select id="form3Examplev4" class="form-control form-control-lg" required/>
+                              <option value="1">Select</option>
+                              <option value="2">Computer Science and Engineering</option>
+                              <option value="3">Information Technology</option>
+                              <option value="4">Electrical and Electronic Engineering </option>
+                              <option value="5">Mechanical Engineering</option>
+                              <option value="6">Others</option>
+                            </select>
+                                <label class="form-label" for="form3Examplea5">Branch</label>
+                              </div>
+        
+                            </div>
+                          </div>
+                          <div class="mb-4 pb-2">
+                            <input class="form-control" type="file" id="formFileMultiple" multiple required>
+                            <label for="formFileMultiple" class="form-label">Marksheets</label>
+                         </div>
+                         
+          
+                       <div class="mb-4 pb-2">
+                        <select id="form3Examplev4" class="form-control form-control-lg" required/>
+                        <option value="1">Select</option>
+                        <option value="2">Cloud Computing</option>
+                        <option value="3">Data Science</option>
+                        <option value="4">Artificial Intelligence</option>
+                        <option value="5">Full Stack Developer</option>
+                        <option value="5">UI & UX Developer</option>
+                        <option value="7">Others</option>
+                      </select>
+                      <label class="form-label" for="form3Examplev4">Skillset</label>
+                    </div>
+          
+                            <div class="mb-4 pb-2">
+                              <input class="form-control" type="file" id="formFileMultiple" multiple>
+                              <label for="formFileMultiple" class="form-label">Certifications</label>
+                           </div>
+                           </div>
+          
+                            <div class="form-check d-flex justify-content-start mb-4 pb-3">
+                              <input class="form-check-input me-3" type="checkbox" value="" id="form2Example3c" />
+                              <label class="form-check-label text-white" for="form2Example3">
+                                I do accept the <a href="#!" class="text-white"><u>Terms and Conditions</u></a> of your
+                                site.
+                              </label>
+                            </div>
+                        
+                            <div class="sub">
+                            <a href="#">
+                              <span></span>
+                              <span></span>
+                              <span></span>
+                              <span></span>
+                              Submit
+                            </a></div>
+                  
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <script>
+            window.console = window.console || function(t) {};
+          </script> 
+            <script>
+            if (document.location.search.match(/type=embed/gi)) {
+              window.parent.postMessage("resize", "*");
+            }
+          </script>
+</body>
+</html>
