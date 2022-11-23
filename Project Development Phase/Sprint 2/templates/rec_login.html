@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+
+  <meta charset="UTF-8">
+  
+<link rel="apple-touch-icon" type="image/png" href="https://cpwebassets.codepen.io/assets/favicon/apple-touch-icon-5ae1a0698dcc2402e9712f7d01ed509a57814f994c660df9f7a952f3060705ee.png" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Charis+SIL:ital,wght@0,400;0,700;1,400;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+
+
+  <title>Login Page</title>
+  
+  
+  
+  
+<style>
+html {
+  height: 100%;
+}
+body {
+  margin:0;
+  padding:0;
+  font-family: 'Charis SIL', serif;
+  background-color: #B9E3E6;
+}
+.nav{
+    display:flex;
+    justify-content:space-around;
+    align-items:center;
+    right: 0px;
+    height:60px;
+    background-color:#19787E;
+    position:fixed;
+    z-index:1;
+    width:100%;
+    transition:0.2s;
+}
+
+
+.logo{
+    z-index:3;
+  
+}
+
+.logo img{
+    align-items:center;
+    width:150px;
+    margin-top:20px;
+}
+
+
+
+.login-box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  padding: 40px;
+  transform: translate(-50%, -50%);
+  background-color:#19787E;
+  box-sizing: border-box;
+  box-shadow: 0 15px 25px #19787E;
+  border-radius: 10px;
+}
+
+.login-box h2 {
+  margin: 0 0 30px;
+  padding: 0;
+  color: #B9E3E6;
+  text-align: center;
+}
+
+.login-box .user-box {
+  position: relative;
+}
+
+.login-box .user-box input {
+  width: 100%;
+  padding: 10px 0;
+  font-size: 16px;
+  color: #B9E3E6;
+  margin-bottom: 30px;
+  border: none;
+  border-bottom: 1px solid #B9E3E6;
+  outline: none;
+  background: transparent;
+}
+.login-box .user-box label {
+  position: absolute;
+  top:0;
+  left: 0;
+  padding: 10px 0;
+  font-size: 16px;
+  color: #B9E3E6;
+  pointer-events: none;
+  transition: .5s;
+}
+
+.login-box .user-box input:focus ~ label,
+.login-box .user-box input:valid ~ label {
+  top: -20px;
+  left: 0;
+  color: #B9E3E6;
+  font-size: 12px;
+}
+
+.login-box form .submit {
+  position: relative;
+  display: inline-block;
+  padding: 10px 20px;
+  color: #B9E3E6;
+  font-size: 16px;
+  text-decoration: none;
+  text-transform: uppercase;
+  overflow: hidden;
+  transition: .5s;
+  margin-top: 40px;
+  letter-spacing: 4px
+}
+
+
+.login-box .submit span {
+  position: absolute;
+  display: block;
+}
+
+
+
+
+.login-box .submit {
+  background-color:#19787E;
+  color: #B9E3E6;
+  border: 2px solid #B9E3E6;
+  font-family: 'Charis SIL', serif;
+  
+}
+.login-box .submit:hover {
+  background: #B9E3E6;
+  color:#19787E;
+  border-radius: 5px;
+  box-shadow: 0 0 5px #B9E3E6,
+              0 0 25px #B9E3E6,
+              0 0 50px #B9E3E6,
+              0 0 100px #B9E3E6;
+}
+
+
+@media screen and (max-width:1200px){
+    .menu-list {
+        width: 55%;
+    }
+}
+
+@media screen and (max-width:1000px){
+    .menu-list a {
+        font-size: 14px;
+    }
+}
+
+
+
+
+
+.nav2 {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 60px;
+   
+    background-color:#19787E;
+    position: fixed;
+    z-index: 1;
+    width: 100%;
+    transition: 0.2s;
+}
+
+#mynav {
+    top: 0px !important;
+}
+</style>
+
+  <script>
+  window.console = window.console || function(t) {};
+</script>
+
+  
+  
+  <script>
+  if (document.location.search.match(/type=embed/gi)) {
+    window.parent.postMessage("resize", "*");
+  }
+</script>
+
+
+</head>
+
+<body translate="no" >
+  <div class="nav" id="mynav">
+    <div class="logo">
+        <a href="{{ url_for('home') }}">
+           
+        </a>
+    </div>
+
+
+</div>
+  <div class="login-box">
+  <h2>Login</h2>
+  <form action = "" method ="POST">
+    <div class="user-box">
+      <input type="text" name="email" required="">
+      <label>Personal Email</label>
+    </div>
+    <div class="user-box">
+      <input type="password" name="password" required="">
+      <label>Password</label>
+    </div>
+  
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <input type="submit" name="" required="" class="submit" value="SUBMIT">
+    
+  </form>
+</div>
+  
+  
+  
+  
+
+</body>
+
+</html>
