@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Charis+SIL:ital,wght@0,400;0,700;1,400;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+
+    <!-- CSS only -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+<!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>  
+    <title>Recruiter Register</title>
+</head>
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: 'Charis SIL', serif;
+}
+.image-responsive{
+    width:100%;
+}
+
+.nav{
+    display:flex;
+    justify-content:space-around;
+    align-items:center;
+    right: 0px;
+    height:60px;
+    background-color:#19787E;
+    position:fixed;
+    z-index:1;
+    width:100%;
+    transition:0.2s;
+}
+
+
+.logo{
+  top: 100px;
+    z-index:1;
+}
+
+.logo img{
+    align-items:center;
+    width:150px;
+}
+
+
+@media screen and (max-width:768px) {
+    html, body {
+        position: relative;
+    }
+#mynav {
+    top:0px !important;
+}
+}
+
+/* page content*/
+
+@media (min-width: 1025px) {
+    .h-custom {
+    height: 155vh !important;
+    }
+    }
+    .card-registration .select-input.form-control[readonly]:not([disabled]) {
+    font-size: 1rem;
+    line-height: 2.15;
+    padding-left: .75em;
+    padding-right: .75em;
+    }
+    .card-registration .select-arrow {
+    top: 13px;
+    }
+    
+    .gradient-custom-2 {
+    /* fallback for old browsers */
+    background-color:#B9E3E6;
+    
+    /* Chrome 10-25, Safari 5.1-6 */
+    background-color:#B9E3E6;
+    
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background-color:#B9E3E6;
+    }
+    
+    .bg-indigo {
+      background-color:#19787E;
+    }
+    @media (min-width: 992px) {
+    .card-registration-2 .bg-indigo {
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    }
+    }
+    @media (max-width: 991px) {
+    .card-registration-2 .bg-indigo {
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    }
+    }
+
+    /*heading*/
+    
+    @keyframes float {
+      0% {
+        box-shadow: 0 5px 15px 0px #B9E3E6(0.6);
+        transform: translatey(0px);
+      }
+      50% {
+        box-shadow: 0 25px 15px 0px #B9E3E6(0.2);
+        transform: translatey(-20px);
+      }
+      100% {
+        box-shadow: 0 5px 15px 0px #B9E3E6(0.6);
+        transform: translatey(0px);
+      }
+    }
+    
+    .contain {
+      display: flex;
+      flex-direction: column;
+    }
+    
+    .ava {
+   
+      color:  #19787E;
+      border-bottom: 2px #B9E3E6;
+      background-color:  white;
+      
+    }
+    
+    
+    @keyframes float {
+      0% {
+        box-shadow: 0 5px 15px 0px #19787E(0.6);
+        transform: translatey(0px);
+      }
+      50% {
+        box-shadow: 0 25px 15px 0px #19787E(0.2);
+        transform: translatey(-20px);
+      }
+      100% {
+        box-shadow: 0 5px 15px 0px #19787E(0.6);
+        transform: translatey(0px);
+      }
+    }
+    
+    .containers {
+      display: flex;
+      flex-direction: column;
+    }
+    
+    .avatar {
+      
+      color: #B9E3E6;
+      border-bottom: 2px #19787E;
+      background-color:  #19787E;
+      
+    }
+    
+    /* submit btn*/
+  .submit {
+  position: relative;
+  display: inline-block;
+  padding: 10px 20px;
+  color: #B9E3E6;
+  font-size: 16px;
+  text-decoration: none;
+  text-transform: uppercase;
+  overflow: hidden;
+  transition: .5s;
+  letter-spacing: 4px;
+  margin-top: -5px;
+  left:60%;
+}
+
+.submit span {
+  position: absolute;
+  display: block;
+}
+
+.submit {
+  background-color:#19787E;
+  color: #B9E3E6;
+  border: 2px solid #B9E3E6;
+  font-family: 'Charis SIL', serif;
+  
+}
+
+.submit:hover {
+  background: #B9E3E6;
+  color:#19787E;
+  border-radius: 5px;
+  box-shadow: 0 0 5px #B9E3E6,
+              0 0 25px #B9E3E6,
+              0 0 50px #B9E3E6,
+              0 0 100px #B9E3E6;
+}
+
+@media screen and (min-width:740px) {
+  .submit{
+    left: 75%;
+  }
+  
+}
+
+    /*recruiter heading*/
+    .waviy {
+      text-align: center;
+  position: relative;
+  font-size: 60px;
+}
+.waviy span {
+  position: relative;
+  display: inline-block;
+  color: #19787E;
+  text-transform: uppercase;
+  
+}
+
+
+</style>
+<body>
+  
+    <div class="nav" id="mynav">
+            <div class="logo" style="margin-top: -40px;">
+                <a href="{{ url_for('home') }}">
+                    
+                </a>
+            </div>
+        </div><br>
+         
+        <section class="h-100 h-custom gradient-custom-2">
+            <div class="container py-5 h-100">
+              <div class="row d-flex justify-content-center align-items-center h-100">
+                <!--<div class="waviy">
+                  <span style="--i:1">R</span>
+                  <span style="--i:2">E</span>
+                  <span style="--i:3">C</span>
+                  <span style="--i:4">R</span>
+                  <span style="--i:5">U</span>
+                  <span style="--i:6">I</span>
+                  <span style="--i:7">T</span>
+                  <span style="--i:8">E</span>
+                  <span style="--i:9">R</span>
+                  <span style="--i:10"></span>
+                  <span style="--i:11">R</span>
+                  <span style="--i:12">E</span>
+                  <span style="--i:13">G</span>
+                  <span style="--i:14">I</span>
+                  <span style="--i:15">S</span>
+                  <span style="--i:16">T</span>
+                  <span style="--i:17">R</span>
+                  <span style="--i:18">A</span>
+                  <span style="--i:19">T</span>
+                  <span style="--i:20">I</span>
+                  <span style="--i:21">O</span>
+                  <span style="--i:22">N</span>
+                 </div>-->
+                 
+                 <form action = "" method ="POST">
+                 <div class="col-12" style="box-shadow: 0 15px 25px #595959;; padding-left: 0%; padding-right: 0%;border-radius: 20px;">
+                  <div class="card card-registration card-registration-2" style="border-radius: 15px;">
+                    <div class="card-body p-0">
+                      <div class="row g-0">
+                        <div class="col-lg-6">
+                          <div class="p-5">
+                            <div class="contain">
+                              <div class="ava">
+                                  <h3 class="fw-normal mb-5" style="margin-top: -1px; margin-left:10px;">Personal Infomation</h3>
+                              </div>
+                            </div><br>
+                            <div class="design">
+                            <div class="row">
+                              <div class="col-md-6 mb-4 pb-2">
+          
+                                <div class="form-outline">
+                                  <input type="text" id="form3Examplev2" class="form-control form-control-lg" name="fname" required/>
+                                  <label class="form-label" for="form3Examplev2">First Name</label>
+                                </div>
+          
+                              </div>
+                              <div class="col-md-6 mb-4 pb-2">
+          
+                                <div class="form-outline">
+                                  <input type="text" id="form3Examplev3" class="form-control form-control-lg" name="lname" required/>
+                                  <label class="form-label" for="form3Examplev3">Last Name</label>
+                                </div>
+          
+                              </div>
+                            </div>   
+                              
+
+                            <div class="row">
+                              <div class="col-md-6 mb-4 pb-2">
+          
+                                <div class="form-outline">
+                                  <input type="date" id="form3Examplev2" class="form-control form-control-lg" name="dob" required/>
+                                  <label class="form-label" for="form3Examplev2">DOB</label>
+                                </div>
+          
+                              </div>
+                              <div class="col-md-6 mb-4 pb-2">
+                                <select id="form3Examplev4" class="form-control form-control-lg" name="gender" required/>
+                              <option value="1">Select</option>
+                              <option value="2">Male</option>
+                              <option value="3">Female</option>                    
+                              <option value="4">Others</option>
+                            </select>
+                            <label class="form-label" for="form3Examplev4">Gender</label>
+                              </div>
+                            </div>   
+                            
+                            <div class="mb-4 pb-2">
+                              <div class="form-outline">
+                                <input type="email" id="form3Examplev4" class="form-control form-control-lg" name="pers_email" required/>
+                                <label class="form-label" for="form3Examplev4">Email id</label>
+                              </div>
+                            </div>
+          
+                            <div class="mb-4 pb-2">
+                              <div class="form-outline">
+                                <input type="password" id="form3Examplev4" class="form-control form-control-lg" name="password" required />
+                                <label class="form-label" for="form3Examplev4">Password</label>
+                              </div>
+                            </div>
+
+                            <div class="mb-4 pb-2">
+                              <div class="form-outline">
+                                <input type="text" id="form3Examplev3" class="form-control form-control-lg" name="ph_no" required/>
+                                <label class="form-label" for="form3Examplev3">Phone Number</label>
+                              </div> 
+                          </div>
+
+
+                            <div class="mb-4 pb-2">
+                              <div class="form-outline">
+                                <textarea type="text" id="form3Examplev4" class="form-control form-control-lg" rows="3" cols="50" name="address" required></textarea>
+                                <label class="form-label" for="form3Examplev4">Address</label>
+                              </div>
+                            </div>
+                          </div>
+                          </div>
+                        </div>
+                        <div class="col-lg-6 bg-indigo text-white">
+                          <div class="p-5">
+                            <div class="containers">
+                              <div class="avatar">
+                                  <h3 class="fw-normal mb-5" style="margin-top: -1px; margin-left:10px;">Company Details</h3>
+                              </div>
+                            </div><br>
+                            <div class="design1">
+          
+                              <div class="mb-4 pb-2">
+                                <div class="form-outline">
+                                  <input type="text" id="form3Examplev4" class="form-control form-control-lg" name="comp_name" required/>
+                                  <label class="form-label" for="form3Examplev4">Company Name</label>
+                                </div>
+                              </div>
+
+                          <div class="row">
+                            <div class="col-md-5 mb-4 pb-2">
+        
+                              <div class="form-outline form-white">
+                                <select id="form3Examplev4" class="form-control form-control-lg" name="designation" required/>
+                              <option value="1">Select</option>
+                              <option value="2">Human Resource director</option>
+                              <option value="3">Senior Manager</option>
+                              <option value="4">Manager</option>
+                              <option value="5">Director</option>
+                              <option value="6">Others</option>
+                            </select>
+                                <label class="form-label" for="form3Examplea4">Designation</label>
+                              </div>
+        
+                            </div>
+                            <div class="col-md-7 mb-4 pb-2">
+        
+                              <div class="form-outline form-white">
+                                <select id="form3Examplev4" class="form-control form-control-lg" name="experience" required/>
+                              <option value="1">Select</option>
+                              <option value="2">1 year</option>
+                              <option value="3">2-3 years</option>
+                              <option value="4">4-5 years </option>
+                              <option value="5">>5 years</option>
+                              <option value="6">Others</option>
+                            </select>
+                                <label class="form-label" for="form3Examplea5">Experience</label>
+                              </div>
+        
+                            </div>
+                          </div>
+                          
+                          <div class="row">
+
+                            <div class="col-md-6 mb-4 pb-2">
+                              <select id="form3Examplev4" class="form-control form-control-lg" name="location" required/>
+                            <option value="1">Select</option>
+                            <option value="2">Chennai</option>
+                            <option value="3">Bangalore</option>
+                            <option value="4">Coimbatore</option>
+                            <option value="5">Madurai</option>
+                            <option value="6">Others</option>
+                          </select>
+                          <label class="form-label" for="form3Examplev4">Location</label>
+                            </div>
+
+                            <div class="col-md-6 mb-4 pb-2">
+        
+                              <div class="form-outline">
+                                <input type="text" id="form3Examplev2" class="form-control form-control-lg" name="highest_qual" required/>
+                                <label class="form-label" for="form3Examplev2">Highest Qualification (Degree)</label>
+                              </div>
+        
+                            </div>
+                          </div>   
+                         
+                          <div class="mb-4 pb-2">
+                            <div class="form-outline">
+                              <input type="email" id="form3Examplev4" class="form-control form-control-lg" name="work_email" required />
+                              <label class="form-label" for="form3Examplev4">Work Email</label>
+                            </div>
+                          </div>
+          
+                       <div class="mb-4 pb-2">
+                        <select id="form3Examplev4" class="form-control form-control-lg" name="expert_area" required/>
+                        <option value="1">Select</option>
+                        <option value="2">Web Development</option>
+                        <option value="3">Data Science</option>
+                        <option value="4">Artificial Intelligence</option>
+                        <option value="5">Others</option>
+                      </select>
+                      <label class="form-label" for="form3Examplev4">Area of Expertise </label>
+                    </div>
+                    
+                    <div class="mb-4 pb-2">
+                      <div class="form-outline">
+                        <textarea type="text" id="form3Examplev4" class="form-control form-control-lg" rows="2" cols="40" name="comp_exp"></textarea>
+                        <label class="form-label" for="form3Examplev4">Company Experience (optional)</label>
+                      </div>
+                    </div>
+                  </div>
+          
+                            <div class="form-check d-flex justify-content-start mb-4 pb-3">
+                              <input class="form-check-input me-3" type="checkbox" value="" id="form2Example3c" />
+                              <label class="form-check-label text-white" for="form2Example3">
+                                I do accept the <a href="#!" class="text-white"><u>Terms and Conditions</u></a> of your
+                                site.
+                              </label>
+                            </div>
+                        
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <input type="submit" name="" required="" class="submit">
+                  
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                </form>
+              </div>
+            </div>
+          </section>
+
+          <script>
+            window.console = window.console || function(t) {};
+          </script> 
+            <script>
+            if (document.location.search.match(/type=embed/gi)) {
+              window.parent.postMessage("resize", "*");
+            }
+          </script>
+</body>
+</html>
