@@ -35,6 +35,30 @@ def learning_module():
 def applicants_list():
     return render_template('applicants_list.html')
 
+@app.route('/rec_domain',methods=["GET","POST"])
+def rec_domain():
+    return render_template('rec_domain.html')
+
+@app.route('/applicant_domain',methods=["GET","POST"])
+def applicant_domain():
+    return render_template('applicant_domain.html')
+
+@app.route('/ds_job_list',methods=["GET","POST"])
+def ds_job_list():
+    return render_template('ds_job_list.html')
+
+@app.route('/java_job_list',methods=["GET","POST"])
+def java_job_list():
+    return render_template('java_job_list.html')
+
+@app.route('/web_dev_job_list',methods=["GET","POST"])
+def web_dev_job_list():
+    return render_template('web_dev_job_list.html')
+
+@app.route('/ai_job_list',methods=["GET","POST"])
+def ai_job_list():
+    return render_template('ai_job_list.html')
+
 @app.route('/Login',methods=["GET","POST"])
 def login():
     global userid
