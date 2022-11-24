@@ -118,7 +118,7 @@ def register():
             
             try:
             # Change to your verified sender
-                from_email = Email("dikshakrish5@gmail.com")
+                from_email = Email("ploganayagi2002@gmail.com")
                 to_email = To(email)  # Change to your recipient
                 subject = "Registration Success"
                 htmlcontent = "Congratulations on registering at ADDK Job Finders! Here are your login credentials:\n Username: "+email+"\nPassword: "+password
@@ -217,7 +217,7 @@ def rec_register():
             
             try:
             # Change to your verified sender
-                from_email = Email("dikshakrish5@gmail.com")
+                from_email = Email("ploganayagi2002@gmail.com")
                 to_email = To(pers_email)  # Change to your recipient
                 subject = "Registration Success"
                 htmlcontent = "Congratulations on registering at ADDK Job Finders! Here are your login credentials:\n Username: "+pers_email+"\nPassword: "+password
