@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+div.gallery {
+  border: 1px solid #ccc;
+}
+
+div.gallery:hover {
+  border: 1px solid #777;
+}
+
+div.gallery img {
+  width: 100%;
+  height: auto;
+}
+
+div.gall img {
+  width:100% ;
+  height:100% ;
+}
+
+div.desc {
+  padding: 10px;
+  text-align: center;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.responsive {
+  padding: 0 6px;
+  float: left;
+  width: 24.99999%;
+}
+
+@media only screen and (max-width: 700px) {
+  .responsive {
+    width: 49.99999%;
+    margin: 6px 0;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .responsive {
+    width: 100%;
+  }
+}
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+h2 {text-align: center;}
+h4 {text-align: center;}
+</style>
+<script>
+        window.watsonAssistantChatOptions = {
+          integrationID: "9a347846-b5ab-4f06-b241-98c9b6f28178", // The ID of this integration.
+          region: "au-syd", // The region your integration is hosted in.
+          serviceInstanceID: "3b375982-d25d-431d-8291-1e63f5c1296a", // The ID of your service instance.
+          onLoad: function(instance) { instance.render(); }
+        };
+        setTimeout(function(){
+          const t=document.createElement('script');
+          t.src="https://web-chat.global.assistant.watson.appdomain.cloud/versions/" + (window.watsonAssistantChatOptions.clientVersion || 'latest') + "/WatsonAssistantChatEntry.js";
+          document.head.appendChild(t);
+        });
+      </script>
+</head>
+<body>
+
+<h2>ASSIGNMENT 3</h2>
+
+<h2>IMAGES</h2>
+
+
+
+<div class="responsive">
+  <div class="gallery">
+    
+      <img src="https://1prathushabucket.s3.jp-tok.cloud-object-storage.appdomain.cloud/1.png"  width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+
+
+<div class="responsive">
+  <div class="gallery">
+    
+      <img src="https://1prathushabucket.s3.jp-tok.cloud-object-storage.appdomain.cloud/2.jpg"  width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    
+      <img src="https://1prathushabucket.s3.jp-tok.cloud-object-storage.appdomain.cloud/3.jpeg" width="600" height="400"  >
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+   
+      <img src="https://1prathushabucket.s3.jp-tok.cloud-object-storage.appdomain.cloud/4.jpg" width="600" height="400"  >
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+<div class="responsive">
+  <div class="gallery">
+ 
+      <img src="https://1prathushabucket.s3.jp-tok.cloud-object-storage.appdomain.cloud/5.jpg"  width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+
+<div class="clearfix"></div>
+
+
+
+</body>
+</html>
