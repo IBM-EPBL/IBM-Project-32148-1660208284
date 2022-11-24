@@ -81,17 +81,17 @@
     
     .gradient-custom-2 {
     /* fallback for old browsers */
-    background-color:#B9E3E6;
+   background-color: #B9E3E6;
     
     /* Chrome 10-25, Safari 5.1-6 */
-    background-color:#B9E3E6;
+    background-color: #B9E3E6;
     
     /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    background-color:#B9E3E6;
+   background-color: #B9E3E6;
     }
     
     .bg-indigo {
-      background-color:#19787E;
+      background-color:#19787E
     }
     @media (min-width: 992px) {
     .card-registration-2 .bg-indigo {
@@ -129,10 +129,10 @@
     }
     
     .ava {
-   
+      width: 400px;
+      height: 40px;
+      box-sizing: border-box;
       color:  #19787E;
-      border-bottom: 2px #B9E3E6;
-      background-color:  white;
       
     }
     
@@ -158,11 +158,10 @@
     }
     
     .avatar {
-      
+      width: 260px;
+      height: 40px;
+      box-sizing: border-box;
       color: #B9E3E6;
-      border-bottom: 2px #19787E;
-      background-color:  #19787E;
-      
     }
     
     /* submit btn*/
@@ -232,7 +231,6 @@
     <div class="nav" id="mynav">
             <div class="logo" style="margin-top: -40px;">
                 <a href="{{ url_for('home') }}">
-                    
                 </a>
             </div>
         </div><br>
@@ -240,33 +238,10 @@
         <section class="h-100 h-custom gradient-custom-2">
             <div class="container py-5 h-100">
               <div class="row d-flex justify-content-center align-items-center h-100">
-                <!--<div class="waviy">
-                  <span style="--i:1">R</span>
-                  <span style="--i:2">E</span>
-                  <span style="--i:3">C</span>
-                  <span style="--i:4">R</span>
-                  <span style="--i:5">U</span>
-                  <span style="--i:6">I</span>
-                  <span style="--i:7">T</span>
-                  <span style="--i:8">E</span>
-                  <span style="--i:9">R</span>
-                  <span style="--i:10"></span>
-                  <span style="--i:11">R</span>
-                  <span style="--i:12">E</span>
-                  <span style="--i:13">G</span>
-                  <span style="--i:14">I</span>
-                  <span style="--i:15">S</span>
-                  <span style="--i:16">T</span>
-                  <span style="--i:17">R</span>
-                  <span style="--i:18">A</span>
-                  <span style="--i:19">T</span>
-                  <span style="--i:20">I</span>
-                  <span style="--i:21">O</span>
-                  <span style="--i:22">N</span>
-                 </div>-->
+                
                  
                  <form action = "" method ="POST">
-                 <div class="col-12" style="box-shadow: 0 15px 25px #595959;; padding-left: 0%; padding-right: 0%;border-radius: 20px;">
+                 <div class="col-12" style="box-shadow: 0 15px 25px #19787E; padding-left: 0%; padding-right: 0%;border-radius: 20px;">
                   <div class="card card-registration card-registration-2" style="border-radius: 15px;">
                     <div class="card-body p-0">
                       <div class="row g-0">
@@ -311,8 +286,9 @@
                                 <select id="form3Examplev4" class="form-control form-control-lg" name="gender" required/>
                               <option value="1">Select</option>
                               <option value="2">Male</option>
-                              <option value="3">Female</option>                    
-                              <option value="4">Others</option>
+                              <option value="3">Female</option>
+                              <option value="4">Non-Binary</option>
+                              <option value="5">Others</option>
                             </select>
                             <label class="form-label" for="form3Examplev4">Gender</label>
                               </div>
@@ -321,7 +297,7 @@
                             <div class="mb-4 pb-2">
                               <div class="form-outline">
                                 <input type="email" id="form3Examplev4" class="form-control form-control-lg" name="pers_email" required/>
-                                <label class="form-label" for="form3Examplev4">Email id</label>
+                                <label class="form-label" for="form3Examplev4">Personal Email</label>
                               </div>
                             </div>
           
@@ -335,7 +311,7 @@
                             <div class="mb-4 pb-2">
                               <div class="form-outline">
                                 <input type="text" id="form3Examplev3" class="form-control form-control-lg" name="ph_no" required/>
-                                <label class="form-label" for="form3Examplev3">Phone Number</label>
+                                <label class="form-label" for="form3Examplev3">Phone number</label>
                               </div> 
                           </div>
 
@@ -371,9 +347,9 @@
                               <div class="form-outline form-white">
                                 <select id="form3Examplev4" class="form-control form-control-lg" name="designation" required/>
                               <option value="1">Select</option>
-                              <option value="2">Human Resource director</option>
+                              <option value="2">Manager</option>
                               <option value="3">Senior Manager</option>
-                              <option value="4">Manager</option>
+                              <option value="4">Human Resource director</option>
                               <option value="5">Director</option>
                               <option value="6">Others</option>
                             </select>
@@ -404,9 +380,9 @@
                               <select id="form3Examplev4" class="form-control form-control-lg" name="location" required/>
                             <option value="1">Select</option>
                             <option value="2">Chennai</option>
-                            <option value="3">Bangalore</option>
+                            <option value="3">Madurai</option>
                             <option value="4">Coimbatore</option>
-                            <option value="5">Madurai</option>
+                            <option value="5">Bangalore</option>
                             <option value="6">Others</option>
                           </select>
                           <label class="form-label" for="form3Examplev4">Location</label>
@@ -416,7 +392,7 @@
         
                               <div class="form-outline">
                                 <input type="text" id="form3Examplev2" class="form-control form-control-lg" name="highest_qual" required/>
-                                <label class="form-label" for="form3Examplev2">Highest Qualification (Degree)</label>
+                                <label class="form-label" for="form3Examplev2">Highest Qualification</label>
                               </div>
         
                             </div>
@@ -433,25 +409,26 @@
                         <select id="form3Examplev4" class="form-control form-control-lg" name="expert_area" required/>
                         <option value="1">Select</option>
                         <option value="2">Web Development</option>
-                        <option value="3">Data Science</option>
+                        <option value="3">Full Stack Development</option>
                         <option value="4">Artificial Intelligence</option>
+                        <option value="4">Data Science</option>
                         <option value="5">Others</option>
                       </select>
-                      <label class="form-label" for="form3Examplev4">Area of Expertise </label>
+                      <label class="form-label" for="form3Examplev4">Area of Expertise (technical)</label>
                     </div>
-                    
                     <div class="mb-4 pb-2">
                       <div class="form-outline">
                         <textarea type="text" id="form3Examplev4" class="form-control form-control-lg" rows="2" cols="40" name="comp_exp"></textarea>
                         <label class="form-label" for="form3Examplev4">Company Experience (optional)</label>
                       </div>
+                    
                     </div>
                   </div>
           
                             <div class="form-check d-flex justify-content-start mb-4 pb-3">
                               <input class="form-check-input me-3" type="checkbox" value="" id="form2Example3c" />
                               <label class="form-check-label text-white" for="form2Example3">
-                                I do accept the <a href="#!" class="text-white"><u>Terms and Conditions</u></a> of your
+                                I accept the <a href="#!" class="text-white"><u>Terms and Conditions</u></a> of your
                                 site.
                               </label>
                             </div>
