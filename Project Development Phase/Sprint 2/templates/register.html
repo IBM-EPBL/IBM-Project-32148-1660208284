@@ -34,24 +34,12 @@
     align-items:center;
     right: 0px;
     height:60px;
-    background-color:#B9E3E6;
+    background-color:#19787E;
     position:fixed;
     z-index:1;
     width:100%;
     transition:0.2s;
 }
-
-
-/*.logo{
-  top: 100px;
-    z-index:1;
-}
-
-.logo img{
-    align-items:center;
-    width:150px;
-}*/
-
 
 @media screen and (max-width:768px) {
     html, body {
@@ -106,63 +94,35 @@
     }
     }
     
-    .design input:focus ~ label,
-    .design input:valid ~ label,
-    textarea:valid~ label,
-    textarea:focus~ label
-    /* body select:focus ~ label,
-    body select:valid ~ label*/ {
-      color:#B9E3E6;
-      font-size: 20px;
-      border-bottom:2px solid #B9E3E6;
-      border-bottom-style: groove;
-      box-shadow:5px 15px 25px #19787E;
-      border-radius: 8px;
-      width: max-content;
-    }
-    
-     .design1 input:focus ~ label,
-     .design1 input:valid ~ label,
-    body select:focus ~ label
-    /* body select:valid ~ label*/ {
-      color : #19787E;
-      font-size: 20px;
-      border-bottom:2px solid #B9E3E6;
-      border-bottom-style: groove;
-      box-shadow:5px 15px 25px #B9E3E6;
-      border-radius: 8px;
-      width: max-content;
-    }
     /*heading*/
     
     @keyframes float {
       0% {
-        box-shadow: 0 5px 15px 0px #19787E(0.6);
+        box-shadow: 0 5px 15px 0px #B9E3E6(0.6);
         transform: translatey(0px);
       }
       50% {
-        box-shadow: 0 25px 15px 0px #19787E(0.2);
+        box-shadow: 0 25px 15px 0px #B9E3E6(0.2);
         transform: translatey(-20px);
       }
       100% {
-        box-shadow: 0 5px 15px 0px #19787E(0.6);
+        box-shadow: 0 5px 15px 0px #B9E3E6(0.6);
         transform: translatey(0px);
       }
     }
     
     .contain {
       display: flex;
-      flex-direction: column;
+      flex-direction: 7;
     }
     
-.ava {
-      width: 260px;
+    .ava {
+      width: 400px;
       height: 40px;
       box-sizing: border-box;
-      color:#19787E;
-      
+      color:  #19787E;
+    }
     
-}
     @keyframes float {
       0% {
         box-shadow: 0 5px 15px 0px #19787E(0.6);
@@ -187,142 +147,69 @@
       width: 260px;
       height: 40px;
       box-sizing: border-box;
-      color: #19787E;
-      border-bottom: 2px #19787E;
-      background-color:  #19787E;
-      border-radius: 40px;
-      overflow: hidden;
-      box-shadow: 0 5px 15px 0px #19787E;
-      transform: translatey(0px);
-      animation: float 6s ease-in-out infinite;
+      color: #B9E3E6;
     }
     
     /* submit btn*/
-    .sub a {
-      position: relative;
-      display: inline-block;
-      padding: 10px 20px;
-      color: #B9E3E6;
-      font-size: 16px;
-      text-decoration: none;
-      text-transform: uppercase;
-      overflow: hidden;
-      transition: .5s;
-      margin-top: -10px;
-      letter-spacing: 4px;
-      left: 80%;
-    }
-    
-    .sub a:hover {
-      background:#B9E3E6;
-      color:#19787E ;
-      border-radius: 5px;
-      box-shadow: 0 0 5px #19787E,
-                  0 0 25px #19787E,
-                  0 0 50px #19787E,
-                  0 0 100px #19787E;
-    }
-    
-    .sub a span {
-      position: absolute;
-      display: block;
-    }
-    
-    .sub a span:nth-child(1) {
-      top: 0;
-      left: -100%;
-      width: 100%;
-      height: 2px;
-      background: linear-gradient(90deg, transparent, #EFE9CE);
-      animation: btn-anim1 1s linear infinite;
-    }
-    
-    @keyframes btn-anim1 {
-      0% {
-        left: -100%;
-      }
-      50%,100% {
-        left: 100%;
-      }
-    }
-    
-    .sub a span:nth-child(2) {
-      top: -100%;
-      right: 0;
-      width: 2px;
-      height: 100%;
-      background: linear-gradient(180deg, transparent, #EFE9CE);
-      animation: btn-anim2 1s linear infinite;
-      animation-delay: .25s
-    }
-    
-    @keyframes btn-anim2 {
-      0% {
-        top: -100%;
-      }
-      50%,100% {
-        top: 100%;
-      }
-    }
-    
-    .sub a span:nth-child(3) {
-      bottom: 0;
-      right: -100%;
-      width: 100%;
-      height: 2px;
-      background: linear-gradient(270deg, transparent, #B9E3E6);
-      animation: btn-anim3 1s linear infinite;
-      animation-delay: .5s
-    }
-    
-    @keyframes btn-anim3 {
-      0% {
-        right: -100%;
-      }
-      50%,100% {
-        right: 100%;
-      }
-    }
-    
-    .sub a span:nth-child(4) {
-      bottom: -100%;
-      left: 0;
-      width: 2px;
-      height: 100%;
-      background: linear-gradient(360deg, transparent,#B9E3E6);
-      animation: btn-anim4 1s linear infinite;
-      animation-delay: .75s
-    }
-    
-    @keyframes btn-anim4 {
-      0% {
-        bottom: -100%;
-      }
-      50%,100% {
-        bottom: 100%;
-      }
-    }
-    @media screen and (max-width: 430px) {
-      .sub a{
-        left: 65%;
-      }
-      
-    }
+    .submit {
+  position: relative;
+  display: inline-block;
+  padding: 10px 20px;
+  color: #B9E3E6;
+  font-size: 16px;
+  text-decoration: none;
+  text-transform: uppercase;
+  overflow: hidden;
+  transition: .5s;
+  margin-top: 40px;
+  letter-spacing: 4px;
+  background-color:#19787E;
+  color: #B9E3E6;
+  border: 2px solid #B9E3E6;
+  font-family: 'Charis SIL', serif;
+  left:70%; 
+}
+
+
+.submit span {
+  position: absolute;
+  display: block;
+}
+/* .submit {
+  background-color:#000E57;
+  color: #EFE9CE;
+  border: 2px solid #EFE9CE;
+  font-family: 'Charis SIL', serif;
+  
+} */
+
+.submit:hover {
+  background: #B9E3E6;
+  color:#19787E;
+  border-radius: 5px;
+  box-shadow: 0 0 5px #B9E3E6,
+              0 0 25px #B9E3E6,
+              0 0 50px #B9E3E6,
+              0 0 100px #B9E3E6;
+}
+
 
 </style>
 <body>
   
-        <div class="nav" id="mynav">
+    <!--<div class="nav" id="mynav">
             <div class="logo" style="margin-top: -40px;">
-                <a href="=#">
+                <a href="{{ url_for('home') }}">
+                    <img src="static/logo2.png" alt="logo" />
                 </a>
             </div>
-        </div><br>
+        </div><br>-->
+        <form action="#" method ="POST">
     
         <section class="h-100 h-custom gradient-custom-2">
             <div class="container py-5 h-100">
               <div class="row d-flex justify-content-center align-items-center h-100">
-                <div class="col-12" style="box-shadow: 0 15px 25px #cccccc; padding-left: 0%; padding-right: 0%;border-radius: 20px;">
+                <div class="col-12" style="box-shadow: 0 15px 25px #19787E; padding-left: 0%; padding-right: 0%;border-radius: 20px;">
                   <div class="card card-registration card-registration-2" style="border-radius: 15px;">
                     <div class="card-body p-0">
                       <div class="row g-0">
@@ -330,15 +217,19 @@
                           <div class="p-5">
                             <div class="contain">
                               <div class="ava">
-                                  <h3 class="fw-normal mb-5" style="margin-top: -1px; margin-left:10px;">Personal Details</h3>
+                                  <h3 class="fw-normal mb-5" style="margin-top: -1px; margin-left:10px;">Personal Information</h3>
                               </div>
                             </div><br>
-                            
+                            <div class="design">
+                            <div class="mb-4 pb-2">
+                                <input class="form-control" type="file" id="formFile" name="photo" required>
+                                <label for="formFile" class="form-label">Photo</label>
+                             </div>
                             <div class="row">
                               <div class="col-md-6 mb-4 pb-2">
           
                                 <div class="form-outline">
-                                  <input type="text" id="form3Examplev2" class="form-control form-control-lg" required/>
+                                  <input type="text" id="form3Examplev2" class="form-control form-control-lg" name="fname" required/>
                                   <label class="form-label" for="form3Examplev2">First Name</label>
                                 </div>
           
@@ -346,34 +237,28 @@
                               <div class="col-md-6 mb-4 pb-2">
           
                                 <div class="form-outline">
-                                  <input type="text" id="form3Examplev3" class="form-control form-control-lg" required/>
+                                  <input type="text" id="form3Examplev3" class="form-control form-control-lg" name="lname" required/>
                                   <label class="form-label" for="form3Examplev3">Last Name</label>
                                 </div>
           
                               </div>
                             </div>   
-                            <div class="design">
-                              <div class="mb-4 pb-2">
-                                  <input class="form-control" type="file" id="formFile" required>
-                                  <label for="formFile" class="form-label">Photo</label>
-                               </div>
 
                             <div class="row">
                               <div class="col-md-6 mb-4 pb-2">
           
                                 <div class="form-outline">
-                                  <input type="date" id="form3Examplev2" class="form-control form-control-lg" required/>
+                                  <input type="date" id="form3Examplev2" class="form-control form-control-lg" name="dob" required/>
                                   <label class="form-label" for="form3Examplev2">DOB</label>
                                 </div>
           
                               </div>
                               <div class="col-md-6 mb-4 pb-2">
-                                <select id="form3Examplev4" class="form-control form-control-lg" required/>
+                                <select id="form3Examplev4" class="form-control form-control-lg" name="gender" required/>
                               <option value="1">Select</option>
                               <option value="2">Male</option>
                               <option value="3">Female</option>
                               <option value="4">Others</option>
-                        
                             </select>
                             <label class="form-label" for="form3Examplev4">Gender</label>
                               </div>
@@ -381,21 +266,21 @@
                             
                             <div class="mb-4 pb-2">
                               <div class="form-outline">
-                                <input type="email" id="form3Examplev4" class="form-control form-control-lg" required/>
+                                <input type="email" id="form3Examplev4" class="form-control form-control-lg" name="email" required/>
                                 <label class="form-label" for="form3Examplev4">Email</label>
                               </div>
                             </div>
           
                             <div class="mb-4 pb-2">
                               <div class="form-outline">
-                                <input type="password" id="form3Examplev4" class="form-control form-control-lg" required />
+                                <input type="password" id="form3Examplev4" class="form-control form-control-lg" name="password" required />
                                 <label class="form-label" for="form3Examplev4">Password</label>
                               </div>
                             </div>
 
                             <div class="mb-4 pb-2">
                               <div class="form-outline">
-                                <input type="text" id="form3Examplev3" class="form-control form-control-lg" required/>
+                                <input type="text" id="form3Examplev3" class="form-control form-control-lg" name="phone" required/>
                                 <label class="form-label" for="form3Examplev3">Phone number</label>
                               </div> 
                           </div>
@@ -403,7 +288,7 @@
 
                             <div class="mb-4 pb-2">
                               <div class="form-outline">
-                                <textarea type="text" id="form3Examplev4" class="form-control form-control-lg" rows="3" cols="50" required></textarea>
+                                <textarea type="text" id="form3Examplev4" class="form-control form-control-lg" rows="3" cols="50" name="address" required></textarea>
                                 <label class="form-label" for="form3Examplev4">Address</label>
                               </div>
                             </div>
@@ -419,17 +304,16 @@
                             </div><br>
                             <div class="design1">
                             <div class="mb-4 pb-2">
-                                <input class="form-control" type="file" id="formFile" required>
-                                <label for="formFile" class="form-label">Upload Resume</label>
+                                <input class="form-control" type="file" id="formFile" name="resume" required>   
+                                <label for="formFile" class="form-label">Resume Upload</label>
                              </div>
           
                              <div class="mb-4 pb-2">
-                              <select id="form3Examplev4" class="form-control form-control-lg" required/>
+                              <select id="form3Examplev4" class="form-control form-control-lg" name="highest_qual" required/>
                               <option value="1">Select</option>
-                              <option value="2">High School</option>
-                              <option value="3">Diploma</option>
-                              <option value="4">UG</option>
-                              <option value="5">PG</option>
+                              <option value="2">UG</option>
+                              <option value="3">PG</option>
+                              <option value="4">Diploma</option>
                             </select>
                             <label class="form-label" for="form3Examplev4">Highest Qualification</label>
                           </div>
@@ -438,13 +322,15 @@
                             <div class="col-md-5 mb-4 pb-2">
         
                               <div class="form-outline form-white">
-                                <select id="form3Examplev4" class="form-control form-control-lg" required/>
+                                <select id="form3Examplev4" class="form-control form-control-lg" name="degree" required/>
                               <option value="1">Select</option>
                               <option value="2">B.E</option>
                               <option value="3">B.Tech</option>
                               <option value="4">M.E</option>
                               <option value="5">M.Tech</option>
-                              <option value="6">Others</option>
+                              <option value="6">BSc</option>
+                              <option value="7">MSc</option>
+                              <option value="8">Others</option>
                             </select>
                                 <label class="form-label" for="form3Examplea4">Degree</label>
                               </div>
@@ -453,11 +339,11 @@
                             <div class="col-md-7 mb-4 pb-2">
         
                               <div class="form-outline form-white">
-                                <select id="form3Examplev4" class="form-control form-control-lg" required/>
+                                <select id="form3Examplev4" class="form-control form-control-lg" name="branch" required/>
                               <option value="1">Select</option>
-                              <option value="2">Computer Science and Engineering</option>
-                              <option value="3">Information Technology</option>
-                              <option value="4">Electrical and Electronic Engineering </option>
+                              <option value="2">Information Technology</option>
+                              <option value="3">Computer Science and Engineering</option>
+                              <option value="4">Electronics and Communication Engineering </option> 
                               <option value="5">Mechanical Engineering</option>
                               <option value="6">Others</option>
                             </select>
@@ -466,47 +352,76 @@
         
                             </div>
                           </div>
-                          <div class="mb-4 pb-2">
-                            <input class="form-control" type="file" id="formFileMultiple" multiple required>
-                            <label for="formFileMultiple" class="form-label">Marksheets</label>
-                         </div>
-                         
+                                <div class="row">
+                                  <div class="col-md-6 mb-4 pb-2">
+                                
+                                    <div class="form-outline">
+                                      <input type="text" id="form3Examplev2" class="form-control form-control-lg" name="tenth" required/>
+                                      <label class="form-label" for="form3Examplev2">10th Percentage</label>
+                                    </div>
+                                
+                                  </div>
+                                  <div class="col-md-6 mb-4 pb-2">
+                                
+                                    <div class="form-outline">
+                                      <input type="text" id="form3Examplev3" class="form-control form-control-lg" name="twelfth" required/>
+                                      <label class="form-label" for="form3Examplev3">12th Percentage</label>
+                                    </div>
+                                
+                                  </div>
+                                </div>   
+                             
+                             <div class="row">
+                               <div class="col-md-6 mb-4 pb-2">
+                            
+                                 <div class="form-outline">
+                                   <input type="text" id="form3Examplev2" class="form-control form-control-lg" name="ug_cgpa" required/>
+                                   <label class="form-label" for="form3Examplev2">UG CGPA</label>
+                                 </div>
+                            
+                               </div>
+                               <div class="col-md-6 mb-4 pb-2">
+                            
+                                 <div class="form-outline">
+                                   <input type="text" id="form3Examplev3" class="form-control form-control-lg" name="ug_percent" required/>
+                                   <label class="form-label" for="form3Examplev3">UG Percentage</label>
+                                 </div>
+                            
+                               </div>
+                             </div>   
+
+                             <div class="mb-4 pb-2">
+                              <input class="form-control" type="file" id="formFile" name="diploma">
+                              <label for="formFile" class="form-label">Diploma certificate (optional)</label>
+                           </div>
           
                        <div class="mb-4 pb-2">
-                        <select id="form3Examplev4" class="form-control form-control-lg" required/>
+                        <select id="form3Examplev4" class="form-control form-control-lg" name="skillset" required/>
                         <option value="1">Select</option>
-                        <option value="2">Cloud Computing</option>
-                        <option value="3">Data Science</option>
+                        <option value="2">Web Development</option>
+                        <option value="3">Full Stack Development</option>
                         <option value="4">Artificial Intelligence</option>
-                        <option value="5">Full Stack Developer</option>
-                        <option value="5">UI & UX Developer</option>
-                        <option value="7">Others</option>
+                        <option value="5">Data Science</option>
+                        <option value="6">Others</option>
                       </select>
                       <label class="form-label" for="form3Examplev4">Skillset</label>
                     </div>
           
-                            <div class="mb-4 pb-2">
-                              <input class="form-control" type="file" id="formFileMultiple" multiple>
-                              <label for="formFileMultiple" class="form-label">Certifications</label>
-                           </div>
                            </div>
           
                             <div class="form-check d-flex justify-content-start mb-4 pb-3">
                               <input class="form-check-input me-3" type="checkbox" value="" id="form2Example3c" />
                               <label class="form-check-label text-white" for="form2Example3">
-                                I do accept the <a href="#!" class="text-white"><u>Terms and Conditions</u></a> of your
+                                I accept the <a href="#!" class="text-white"><u>Terms and Conditions</u></a> of your
                                 site.
                               </label>
                             </div>
                         
-                            <div class="sub">
-                            <a href="#">
-                              <span></span>
-                              <span></span>
-                              <span></span>
-                              <span></span>
-                              Submit
-                            </a></div>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <input type="submit" name="" required="" class="submit">
                   
                           </div>
                         </div>
@@ -517,6 +432,7 @@
               </div>
             </div>
           </section>
+          </form>
 
           <script>
             window.console = window.console || function(t) {};
