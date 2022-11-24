@@ -58,7 +58,7 @@ def web_dev_job_list():
 @app.route('/ai_job_list',methods=["GET","POST"])
 def ai_job_list():
     return render_template('ai_job_list.html')
-
+    
 @app.route('/Login',methods=["GET","POST"])
 def login():
     global userid
@@ -67,7 +67,7 @@ def login():
     if request.method=="POST":
         username = request.form['email']
         password = request.form['password']
-        sql = "SELECT * FROM APPLICANTINFO WHERE EMAIL=? AND PASSWORD=?"
+        sql = "SELECT * FROM APPLICANT WHERE EMAIL=? AND PASSWORD=?"
         stmt = ibm_db.prepare(conn,sql)
         ibm_db.bind_param(stmt,1,username)
         ibm_db.bind_param(stmt,2,password)
@@ -106,10 +106,10 @@ def register():
         twelfth = request.form['twelfth']
         ug_cgpa = request.form['ug_cgpa']
         ug_percent = request.form['ug_percent']
-        #diploma = request.form['diploma']
+        diploma = request.form['diploma']
         skillset = request.form['skillset']
         
-        sql="SELECT * FROM APPLICANTINFO WHERE EMAIL=?"
+        sql="SELECT * FROM APPLICANT WHERE EMAIL=?"
         stmt=ibm_db.prepare(conn,sql)
         ibm_db.bind_param(stmt,1,email)
         ibm_db.execute(stmt)
@@ -120,7 +120,7 @@ def register():
         elif not re.match(r'[^@]+@[^@]+\.[^@]+', email):
             msg = "Invalid Email Address."
         else:
-            insert_sql = "INSERT INTO APPLICANTINFO VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)"
+            insert_sql = "INSERT INTO APPLICANT VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)"
             prep_stmt = ibm_db.prepare(conn,insert_sql)
             ibm_db.bind_param(prep_stmt,1,photo)
             ibm_db.bind_param(prep_stmt,2,fname)
@@ -139,8 +139,8 @@ def register():
             ibm_db.bind_param(prep_stmt,15,twelfth)
             ibm_db.bind_param(prep_stmt,16,ug_cgpa)
             ibm_db.bind_param(prep_stmt,17,ug_percent)
-            #ibm_db.bind_param(prep_stmt,18,diploma)
-            ibm_db.bind_param(prep_stmt,18,skillset)
+            ibm_db.bind_param(prep_stmt,18,diploma)
+            ibm_db.bind_param(prep_stmt,19,skillset)
             
             ibm_db.execute(prep_stmt)
             msg = "You have successfully registered."
@@ -148,9 +148,9 @@ def register():
 #            sendgridmail(to_email,password)
 
             try:
-                sg = sendgrid.SendGridAPIClient('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')
+                sg = sendgrid.SendGridAPIClient('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')
             # Change to your verified sender
-                from_email = Email("dhanalakshmi.sat@gmail.com")
+                from_email = Email("ploganayagi2002@gmail.com")
                 to_email = To(email)  # Change to your recipient
                 subject = "Registration Success"
                 htmlcontent = "Congratulations on registering at ADDK Job Finders! Here are your login credentials:\n Username: "+email+"\nPassword: "+password
@@ -248,9 +248,9 @@ def rec_register():
             ibm_db.execute(prep_stmt)
             
             try:
-                sg = sendgrid.SendGridAPIClient('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')
+                sg = sendgrid.SendGridAPIClient('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')
             # Change to your verified sender
-                from_email = Email("dhanalakshmi.sat@gmail.com")
+                from_email = Email("ploganayagi2002@gmail.com")
                 to_email = To(pers_email)  # Change to your recipient
                 subject = "Registration Success"
                 htmlcontent = "Congratulations on registering at ADDK Job Finders! Here are your login credentials:\n Username: "+pers_email+"\nPassword: "+password
@@ -388,7 +388,7 @@ def web_dev_post_job():
         ibm_db.bind_param(stmt,7,experience)
         ibm_db.bind_param(stmt,8,job_desc)
         ibm_db.execute(stmt)
- #       account = ibm_db.fetch_assoc(stmt)
+        account = ibm_db.fetch_assoc(stmt)
         return render_template('rec_domain.html')
 
     elif request.method == 'POST': msg="Please fill out the form."
@@ -413,7 +413,7 @@ def apply_job():
         comp_name = request.form['comp_name']
         position = request.form['position']
         
-        sql="INSERT INTO APPLY_JOB VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?)"
+        sql="INSERT INTO APPLY_JOBS VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?)"
         stmt=ibm_db.prepare(conn,sql)
         ibm_db.bind_param(stmt,1,fname)
         ibm_db.bind_param(stmt,2,lname)
