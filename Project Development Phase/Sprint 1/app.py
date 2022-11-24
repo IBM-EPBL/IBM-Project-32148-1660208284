@@ -118,9 +118,9 @@ def register():
             msg = "You have successfully registered."
             
             try:
-                sg = sendgrid.SendGridAPIClient('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')
+                sg = sendgrid.SendGridAPIClient('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')
             # Change to your verified sender
-                from_email = Email("dikshakrish5@gmail.com")
+                from_email = Email("ploganayagi2002@gmail.com")
                 to_email = To(email)  # Change to your recipient
                 subject = "Registration Success"
                 htmlcontent = "Congratulations on registering at ADDK Job Finders! Here are your login credentials:\n Username: "+email+"\nPassword: "+password
@@ -218,9 +218,9 @@ def rec_register():
             ibm_db.execute(prep_stmt)
             
             try:
-                sg = sendgrid.SendGridAPIClient('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')
+                sg = sendgrid.SendGridAPIClient('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')
             # Change to your verified sender
-                from_email = Email("dikshakrish5@gmail.com")
+                from_email = Email("ploganayagi2002@gmail.com")
                 to_email = To(pers_email)  # Change to your recipient
                 subject = "Registration Success"
                 htmlcontent = "Congratulations on registering at ADDK Job Finders! Here are your login credentials:\n Username: "+pers_email+"\nPassword: "+password
@@ -404,10 +404,9 @@ def apply_job():
 
 def sendgridmail(to_mail_id):
     try:
-        sg = sendgrid.SendGridAPIClient(
-            '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')
+        sg = sendgrid.SendGridAPIClient('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')
     # Change to your verified sender
-        from_email = Email("kencydanielfdo@gmail.com")
+        from_email = Email("ploganayagi2002@gmail.com")
         to_email = To(to_mail_id)  # Change to your recipient
         subject = "Plasma Donation request "
         htmlcontent = "Hi, A user has sent you a request for plasma donation. If you are willing to donate kindly contact them with this email id. Email: " + \
