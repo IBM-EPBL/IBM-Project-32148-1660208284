@@ -19,7 +19,7 @@ conn = ibm_db.connect("DATABASE=bludb;HOSTNAME=ba99a9e6-d59e-4883-8fc0-d6a8c9f7a
 #app.config['MAIL_PORT'] = 587
 #app.config['MAIL_USE_TLS'] = True
 #app.config['MAIL_USERNAME'] = 'apikey'
-#app.config['MAIL_PASSWORD'] = os.environ.get('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')
+#app.config['MAIL_PASSWORD'] = os.environ.get('api_key')
 #app.config['MAIL_DEFAULT_SENDER'] = os.environ.get('imbskillsandjob@gmail.com')
 #mail = Mail(app)
 
@@ -148,7 +148,7 @@ def register():
 #            sendgridmail(to_email,password)
 
             try:
-                sg = sendgrid.SendGridAPIClient('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')
+                sg = sendgrid.SendGridAPIClient('api_key')
             # Change to your verified sender
                 from_email = Email("ploganayagi2002@gmail.com")
                 to_email = To(email)  # Change to your recipient
@@ -248,7 +248,7 @@ def rec_register():
             ibm_db.execute(prep_stmt)
             
             try:
-                sg = sendgrid.SendGridAPIClient('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')
+                sg = sendgrid.SendGridAPIClient('api_key')
             # Change to your verified sender
                 from_email = Email("ploganayagi2002@gmail.com")
                 to_email = To(pers_email)  # Change to your recipient
