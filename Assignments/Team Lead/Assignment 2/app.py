@@ -1,35 +1,3 @@
-reg.html (Registration Page):-
- <html>
- <body>
- <center>
- <h3><b>REGISTRATION</b></h3>
- <form action = "http://localhost:5000/reg2" method ="POST">
- <p>Enter Register No.: <input type = "text" name="rollno"/></p>
- <p>Enter Email ID: <input type = "text" name="email"/></p>
- <p>Enter Username: <input type = "text" name="uname"/></p>
- <p>Enter Password: <input type = "password" name="pwd"/></p>
- <p><input type = "submit" value="SUBMIT"/></p>
- </form>
- </center>
- </body>
- </html>
-
- login.html (Login Page):-
- <html>
- <body>
- <center>
- <h3><b>LOGIN</b></h3>
- <form action = "http://localhost:5000/login" method = "POST">
- <p>Enter Username: <input type = "text" name="uname"/></p>
- <p>Enter Password: <input type = "password" name="pwd"/></p>
- <p><input type = "submit" value="SUBMIT"/></p>
- </form>
- </center>
- </body>
- </html>
-
-ass2.py
-
 from flask import Flask,render_template, redirect, url_for, request, session
 import ibm_db
 import re
