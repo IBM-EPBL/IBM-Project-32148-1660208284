@@ -68,7 +68,7 @@ conn = ibm_db.connect("DATABASE=bludb;HOSTNAME=ba99a9e6-d59e-4883-8fc0-d6a8c9f7a
  return render_template('login.html', msg=msg)
 
  elif request.method == 'POST': msg="Please fill out the form."
- return render_template('reg2.html',msg=msg)
+ return render_template('reg.html',msg=msg)
 
  @app.route('/welcome/<username>')
  def welcome(username):
