@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+
+  <meta charset="UTF-8">
+  
+<link rel="apple-touch-icon" type="image/png" href="https://cpwebassets.codepen.io/assets/favicon/apple-touch-icon-5ae1a0698dcc2402e9712f7d01ed509a57814f994c660df9f7a952f3060705ee.png" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Charis+SIL:ital,wght@0,400;0,700;1,400;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+
+
+  <title>Login Page</title>
+  
+  
+  
+  
+<style>
+html {
+  height: 100%;
+}
+body {
+  margin:0;
+  padding:0;
+  font-family: 'Charis SIL', serif;
+  background-color: #B9E3E6;
+}
+.nav{
+    display:flex;
+    justify-content:space-around;
+    align-items:center;
+    right: 0px;
+    height:60px;
+    background-color:#19787E;
+    position:fixed;
+    z-index:1;
+    width:100%;
+    transition:0.2s;
+}
+
+
+.logo{
+    z-index:3;
+  
+}
+
+.logo img{
+    align-items:center;
+    width:150px;
+    margin-top:20px;
+}
+
+.menu-list {
+    display: flex;
+    width: 45%;
+    justify-content:end;
+   
+}
+
+    .menu-list li {
+        list-style: none;
+    }
+
+    .menu-list a {
+        color: #B9E3E6;
+        text-decoration: none;
+        letter-spacing: 3px;
+        font-weight: bold;
+        font-size: 16px;
+        transition: 0.2s;
+        text-transform: uppercase;
+     
+    }
+
+        .menu-list a:hover {
+            color: #B9E3E6;
+            transition: 0.2s;
+        }
+
+
+
+@media screen and (max-width:1200px){
+    .menu-list {
+        width: 55%;
+    }
+}
+
+@media screen and (max-width:1000px){
+    .menu-list a {
+        font-size: 14px;
+    }
+}
+
+
+table, th, td {
+  border: 1px solid whitesmoke;
+  border-collapse: collapse;
+}
+tr:hover {background-color: #D6EEEE;}
+
+.nav2 {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 60px;
+   
+    background-color:#19787E;
+    position: fixed;
+    z-index: 1;
+    width: 100%;
+    transition: 0.2s;
+}
+
+#mynav {
+    top: 0px !important;
+}
+</style>
+
+  <script>
+  window.console = window.console || function(t) {};
+</script>
+
+  
+  
+  <script>
+  if (document.location.search.match(/type=embed/gi)) {
+    window.parent.postMessage("resize", "*");
+  }
+</script>
+
+
+</head>
+
+<body translate="no" >
+  <div class="nav" id="mynav">
+    <div class="logo">
+        <a href="{{ url_for('applicant_domain') }}">
+           
+        </a>
+    </div>
+
+  
+    <ul class="menu-list">
+     
+      
+      <li><a href="{{ url_for('apply_job') }}">Apply Here</a></li>
+      
+  </ul>
+
+
+</div>
+  
+  <form action = "" method ="POST"><br>
+    <br>
+    <center><h2>FULL STACK DEVELOPER JOB LIST</h2></center>
+    <table style="width:100%">
+      <tr>
+        <th>Comp_name</th>
+        <th>position</th>
+        <th>location</th>
+        <th>degree</th>
+        <th>job_type</th>
+        <th>tech_area</th>
+        <th>experience</th>
+        <th>job_desc</th>
+      </tr>
+      <tr>
+        <td>Albot Software</td>
+        <td>Full Stack Developer</td>
+        <td>Chennai</td>
+        <td>M.E/M.Tech</td>
+        <td>Full time</td>
+        <td>Full Stack Development</td>
+        <td>>3 years</td>
+        <td>The primary responsibility of a Full Stack Developer includes designing user interactions on websites, developing servers and databases for website functionality and coding for mobile platforms. Particular responsibilities often include: Developing front end website architecture.</td>
+      </tr>
+      <tr>
+        <td>RMS Software</td>
+        <td>Front End Developer</td>
+        <td>Bangalore</td>
+        <td>MSC</td>
+        <td>Full time/Internship</td>
+        <td>Full Stack Development</td>
+        <td>No Experience</td>
+        <td>Should be responsible for the design and construction of websites. Must ensure that sites meet user expectations by ensuring they look good, run smoothly and offer easy access points with no loading issues between pages or error messages.</td>
+      </tr>
+      <tr>
+        <td>APJ Software</td>
+        <td>Back End Developer</td>
+        <td>Coimbatore</td>
+        <td>B.E/B.Tech</td>
+        <td>Full time</td>
+        <td>Full Stack Development</td>
+        <td>2-3 years</td>
+        <td>The necessary technical skills required to become a backend developer are: In-depth knowledge of at least one backend programming language and framework. Knowledge of front-end technologies, such as HTML, CSS, and JavaScript, so that he can communicate with the front-end team.</td>
+      </tr>
+      <tr>
+        <td>PMR software</td>
+        <td>Full Stack Developer</td>
+        <td>Madurai</td>
+        <td>B.E/B.Tech</td>
+        <td>Full time</td>
+        <td>Full Stack Development</td>
+        <td>>3 years</td>
+        <td>The primary responsibility of a Full Stack Developer includes designing user interactions on websites, developing servers and databases for website functionality and coding for mobile platforms. Particular responsibilities often include: Developing front end website architecture.</td>
+      </tr>
+      <tr>
+        <td>ACE Software</td>
+        <td>Full Stack Developer</td>
+        <td>Chennai</td>
+        <td>B.E/B.Tech</td>
+        <td>Full time/td>
+        <td>Full Stack Development</td>
+        <td>>3 years</td>
+        <td>The primary responsibility of a Full Stack Developer includes designing user interactions on websites, developing servers and databases for website functionality and coding for mobile platforms. Particular responsibilities often include: Developing front end website architecture.</td>
+      </tr>
+
+    </table>
+</form>
+
+  
+  
+  
+  
+
+</body>
+
+</html>

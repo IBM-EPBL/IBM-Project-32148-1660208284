@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Charis+SIL:ital,wght@0,400;0,700;1,400;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    
+        <!-- CSS only -->
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>  
+    <title>Learning modules</title>
+</head>
+<style>
+
+    /*nav*/
+    *{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: 'Charis SIL', serif;
+}
+.image-responsive{
+    width:100%;
+}
+
+.nav{
+    display:flex;
+    justify-content:space-around;
+    align-items:center;
+    right: 0px;
+    height:60px;
+    background-color:#19787E;
+    position:fixed;
+    z-index:1;
+    width:100%;
+    transition:0.2s;
+}
+
+
+@media screen and (max-width:768px) {
+    html, body {
+        position: relative;
+    }
+#mynav {
+    top:0px !important;
+}
+}
+
+    body{
+        background-color: #B9E3E6;
+    }
+
+    /*main body*/
+    .card{
+        border-radius: 25px;
+        width: 350px;
+        box-shadow: 0 15px 25px #19787E;
+    }
+
+    iframe{
+        border-top-left-radius: 25px;
+        border-top-right-radius: 25px;
+    }
+
+    .card-body {
+        background-color: #19787E;
+        border-bottom-left-radius: 25px;
+        border-bottom-right-radius: 25px;
+    }
+    .card-title{
+        color: #B9E3E6;
+        text-decoration-line: underline;
+        text-decoration-style: dotted;
+    }
+    .card-text{
+        color: #B9E3E6;
+    }
+    .row{
+        margin: auto;
+    }
+    @media screen and (min-width:1000){
+        .card{
+            width:100px;
+        }
+        
+    }
+
+    /*recruiter heading*/
+    .waviy {
+      text-align: center;
+  position: relative;
+  font-size: 60px;
+}
+.waviy span {
+  position: relative;
+  display: inline-block;
+  color: #19787E;
+  
+}
+/*@keyframes waviy {
+  0%,40%,100% {
+    transform: translateY(0)
+  }
+  20% {
+    transform: translateY(-20px)
+  }
+}
+@media screen and (min-width:1000px) {
+    .waviy {
+        margin-left: 20px;
+    }
+    
+}*/
+</style>
+<body>
+    <form action = "" method ="POST">
+                       <div class="container text-center">
+                        <div class="nav" id="mynav">
+                            <div class="logo" style="margin-top: -40px;">
+                                <a href="{{ url_for('applicant_domain') }}">
+                                    
+                                </a>
+                            </div>
+                        </div><br>
+                      
+                        <div class="container text-center"><br><br>
+                                 
+                          <div class="waviy">
+                              <span style="--i:1">L</span>
+                              <span style="--i:2">E</span>
+                              <span style="--i:3">A</span>
+                              <span style="--i:4">R</span>
+                              <span style="--i:5">N</span>
+                              <span style="--i:6">I</span>
+                              <span style="--i:7">N</span>
+                              <span style="--i:8">G</span>
+                              <br>
+                              <span style="--i:9">S</span>
+                              <span style="--i:10">K</span>
+                              <span style="--i:11">I</span>
+                              <span style="--i:12">L</span>
+                              <span style="--i:13">L</span>
+                              <span style="--i:14">S</span>
+                              
+                             </div>
+                                  <div class="row">
+                                    <div class="col">
+                                      <div class="card">
+                                          <iframe src="https://www.youtube.com/embed/iG2jotQo9NI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                          <div class="card-body">
+                                            <h5 class="card-title">HTML & CSS</h5>
+                                            <p class="card-text">You’ll learn how to code with modern HTML and CSS, the main building blocks of any website. If you want to become a successful web developer, this is where you need to start!</p>
+                                          </div>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                      <div class="card">
+                                          <iframe src="https://www.youtube.com/embed/AA7i2GcTGwU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                          <div class="card-body">
+                                            <h5 class="card-title">SQL</h5>
+                                            <p class="card-text">This SQL full course or MySQL full course video covers everything to master structure query language using MySQL, PostgreSQL as well as SQL server.</p>  
+                                          </div>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                      <div class="card">
+                                          <iframe src="https://www.youtube.com/embed/GwIo3gDZCVQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                          <div class="card-body">
+                                            <h5 class="card-title">Machine Learning</h5>
+                                            <p class="card-text">This Machine Learning Full Course video will help you understand and learn Machine Learning Algorithms in detail. This Machine Learning Tutorial is ideal for both beginners as well as professionals who want to master Machine Learning Algorithms.</p>  
+                                          </div>
+                                        </div>
+                                    </div>
+                                  </div>
+                                </div><br>
+                                <div class="container text-center">
+                                  <div class="row">
+                                    <div class="col">
+                                      <div class="card">
+                                          <iframe src="https://www.youtube.com/embed/JMUxmLyrhSk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                          <div class="card-body">
+                                            <h5 class="card-title">Artificial Intelligence</h5>
+                                            <p class="card-text">This video on "Artificial Intelligence" will provide you with a comprehensive and detailed knowledge of Artificial Intelligence concepts with hands-on examples.</p>
+                                          </div>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                      <div class="card">
+                                          <iframe src="https://www.youtube.com/embed/Q33KBiDriJY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                          <div class="card-body">
+                                            <h5 class="card-title">Web Development</h5>
+                                            <p class="card-text">This Web Development Full Course video will help you understand and learn Web Development in detail. This Web Development Tutorial is ideal for both beginners as well as professionals who want to master Web Development technologies. </p>
+                                          </div>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                      <div class="card">
+                                          <iframe src="https://www.youtube.com/embed/QeTbLkH64kQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                          <div class="card-body">
+                                            <h5 class="card-title">UI / UX </h5>
+                                            <p class="card-text">In this video on UIUX Course, you will learn what is UIUX, Basic Concepts of UIUX Design, Introduction to Design Thinking, Design Thinking Stages, Divergent and Convergent Thinking, Prototyping, and Testing, Creating Personas in UI/UX, UIUX Career Roadmap and lot more interesting concepts. </p>  
+                                          </div>
+                                        </div>
+                                    </div>
+                                  </div>
+                                </div><br>
+                                <div class="container text-center">
+                                  <div class="row">
+                                    <div class="col">
+                                      <div class="card">
+                                          <iframe src="https://www.youtube.com/embed/kjBvQWHk_KI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                          <div class="card-body">
+                                            <h5 class="card-title">Full Stack Development</h5>
+                                            <p class="card-text">This full-stack web development course video will cover various technologies used in application development.This video will cover in-depth concepts of all the tools to become a successful full-stack developer.</p>  
+                                          </div>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                      <div class="card">
+                                          <iframe src="https://www.youtube.com/embed/-ETQ97mXXF0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                          <div class="card-body">
+                                            <h5 class="card-title">DATA SCIENCE</h5>
+                                            <p class="card-text">This Data Science Full Course video will help you understand and learn Data Science Algorithms in detail. This Data Science Tutorial is ideal for both beginners as well as professionals who want to master Data Science Algorithms.</p>  
+                                          </div>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                      <div class="card">
+                                          <iframe src="https://www.youtube.com/embed/ckdHNu4kfL0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                          <div class="card-body">
+                                            <h5 class="card-title">R FOR DATASCIENCE</h5>
+                                            <p class="card-text">Data Science Masters Program makes you proficient in tools and systems used by Data Science Professionals. It includes training on Statistics, Data Science, Python, Apache Spark & Scala, Tensorflow and Tableau. The Data Science course curriculum has been determined by extensive research on 5000+ job descriptions across the globe.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                  </div>
+                                </div>
+                            
+  
+                            </div>
+                        
+                            </form>
+
+
+     
+      
+      
+      
+                        <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>   
+</body>
+</html>

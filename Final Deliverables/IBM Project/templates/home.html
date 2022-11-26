@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+
+  <meta charset="UTF-8">  
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+<link href="https://fonts.googleapis.com/css2?family=Charis+SIL:ital,wght@0,400;0,700;1,400;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+<title>Home Page</title> 
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: 'Charis SIL', serif;
+}
+.main{
+    background-color: #B9E3E6;
+}
+.image-responsive{
+    width:100%;
+}
+
+.nav{
+    display:flex;
+    justify-content:space-around;
+    align-items:center;
+    right: 0px;
+    height:60px;
+    background-color:#19787E;
+
+;
+    position:fixed;
+    z-index:1;
+    width:100%;
+    transition:0.2s;
+}
+
+
+.menu-list {
+    display: flex;
+    width: 85%;
+    justify-content: space-around;
+   
+}
+
+    .menu-list li {
+        list-style: none;
+    }
+
+    .menu-list a {
+        color: #B9E3E6;
+        text-decoration: none;
+        letter-spacing: 3px;
+        font-weight: bold;
+        font-size: 16px;
+        transition: 0.2s;
+        text-transform: uppercase;
+    }
+
+        .menu-list a:hover {
+            color:#B9E3E6;
+            transition: 0.2s;
+        }
+
+.menu div{
+    width:25px;
+    height:3px;
+    margin:5px;
+    background-color:#B9E3E6;
+    z-index:3;
+}
+
+.menu{
+    display:none;
+    cursor:pointer;
+}
+.about_us {
+        display: flex;
+        align-items: center;
+        justify-content: center
+      }
+      .text1 p{
+        text-align: unset;
+      }
+      img {
+        max-width: 100%
+      }
+      .image {
+        flex-basis: 40%
+      }
+      .text1 {
+        font-size: 20px;
+        padding-left: 20px;
+        padding-right: 20px;
+        width: 1000px;
+        text-align: justify;
+      }
+@media screen and (max-width:1200px){
+    .menu-list {
+        width: 55%;
+    }
+}
+
+@media screen and (max-width:1000px){
+    .menu-list a {
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width:768px) {
+    html, body {
+        position: relative;
+    }
+
+    .menu-list {
+        position: absolute;
+        right: 0px;
+        height: 400px;
+        top: 60px;
+        background-color: #19787E;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        transform: translateY(-150%);
+        transition: transform 0.5s ease-in;
+        z-index: 1;
+    }
+
+        .menu-list li {
+            opacity: 0;
+        }
+
+    .menu {
+        display: block;
+    }
+
+    .nav {
+        background-color: #19787E;
+    }
+}
+    .nav-active{
+        transform: translateX(0%);
+    }
+
+    @keyframes navReveal{
+        from{
+            opacity:0;
+            transform: translateY(-50px);
+        }
+        to{
+            opacity:1;
+            transform: translateY(0px);
+        }
+    }
+
+    .toggle .line1{
+        transform: rotate(-45deg) translate(-5px, 6px);
+    }
+
+    .toggle .line2{
+        opacity:0;
+    }
+
+.toggle .line3 {
+    transform: rotate(45deg) translate(-5px, -6px);
+}
+
+
+.nav2 {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 60px;
+    font-family: 'Poppins', sans-serif;
+    background-color:#19787E;
+    position: fixed;
+    z-index: 1;
+    width: 100%;
+    transition: 0.2s;
+}
+
+#mynav {
+    top: 0px !important;
+}
+</style>
+  <script>
+  window.console = window.console || function(t) {};
+</script> 
+  <script>
+  if (document.location.search.match(/type=embed/gi)) {
+    window.parent.postMessage("resize", "*");
+  }
+</script>
+</head>
+<body class="main" translate="no" >
+ <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>  --> 
+<div class="nav" id="mynav">
+        
+
+        <ul class="menu-list">
+         
+            <li><a href="{{ url_for('home') }}">Home</a></li>
+            <li><a href="{{ url_for('login') }}">Applicant Login</a></li>
+            <li><a href="{{ url_for('register') }}">Applicant Register</a></li>
+             <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="{{ url_for('rec_register') }}">Recruiter Register</a></li>
+            <li><a href="{{ url_for('rec_login') }}">Recruiter Login</a></li>
+          
+        </ul>
+
+        <div class="menu">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+        </div>
+
+
+    </div>
+
+    <img src="static/contact.png" alt="header" class="image-responsive" />
+    <div class="about_us">
+        <div class="image">
+            <img src="static/about.jpeg">
+          </div>
+      <div class="text1" id="about">
+        <h1>About Us</h1>
+        <p> Having a wide range of talents but unsure of which position best suits you? You shouldn't worry! We have developed a skill recommender system 
+        that enables both experienced workers and recent graduates to login, search for opportunities, or speak with a chatbot directly to land their 
+        ideal position. creating a complete online application that may show available jobs based on the users' skill sets.The database contains both 
+        the users' data and that of their users. Based on the user's skill set, a notification is delivered when a position becomes available. The user
+        will converse with the chatbot and receive recommendations depending on his abilities. To find out what jobs are available right now, we may
+        utilise a job search programme that will pull information from the website. 
+         </p>
+      </div>
+  
+    </div>
+    <div class="about_us">
+       
+        <div class="text1" id="contact">
+          <h1>Contact</h1><br>
+       <p>   <i class="fas fa-phone" style="font-size:24px;"></i><p class="details">9745643210</p>
+           <br> <i class="fas fa-envelope" style="font-size:24px;"></i><p class="details">jobzz@gmail.com</p> </p>
+        </div>
+        <div class="image">
+            <img src="static/image.jpeg">
+          </div>
+      </div>
+    <script>
+        const navSlide1 = () => {
+            const menu = document.querySelector('.menu');
+            const nav = document.querySelector('.menu-list');
+            const menuList = document.querySelectorAll('.menu-list li');
+
+            menu.addEventListener('click', () => {
+                nav.classList.toggle('nav-active');
+
+                menuList.forEach((link, index) => {
+                    if (link.style.animation) {
+                        link.style.animation = '';
+                    }
+                    else {
+                        link.style.animation = `navReveal 0.5s ease forwards ${index / 7 + 0.5}s`;
+                    }
+                });
+                menu.classList.toggle('toggle');
+            });
+        }
+
+        navSlide();
+
+        $(function () {
+            var header = $("#mynav");
+            $(window).scroll(function () {
+                var scroll = $(window).scrollTop();
+
+                if (scroll >= 200) {
+                    header.removeClass('nav').addClass('nav2');
+        }
+            else {
+                header.removeClass('nav2').addClass('nav');
+            }
+            });
+        });
+
+    </script>
+    <script src="https://cpwebassets.codepen.io/assets/common/stopExecutionOnTimeout-2c7831bb44f98c1391d6a4ffda0e1fd302503391ca806e7fcc7b9b87197aec26.js"></script>
+
+  
+      <script id="rendered-js" >
+    const navSlide = () => {
+  const menu = document.querySelector('.menu');
+  const nav = document.querySelector('.menu-list');
+  const menuList = document.querySelectorAll('.menu-list li');
+
+  menu.addEventListener('click', () => {
+    nav.classList.toggle('nav-active');
+
+    menuList.forEach((link, index) => {
+      if (link.style.animation) {
+        link.style.animation = '';
+      } else
+      {
+        link.style.animation = `navReveal 0.5s ease forwards ${index / 7 + 0.5}s`;
+      }
+    });
+    menu.classList.toggle('toggle');
+  });
+};
+
+navSlide();
+
+$(function () {
+  var header = $("#mynav");
+  $(window).scroll(function () {
+    var scroll = $(window).scrollTop();
+
+    if (scroll >= 200) {
+      header.removeClass('nav').addClass('nav2');
+    } else
+    {
+      header.removeClass('nav2').addClass('nav');
+    }
+  });
+});
+//# sourceURL=pen.js
+    </script>
+
+<script>
+    window.watsonAssistantChatOptions = {
+      integrationID: "b24da281-5dd8-43a2-b80b-6c135d15e6a3", // The ID of this integration.
+      region: "au-syd", // The region your integration is hosted in.
+      serviceInstanceID: "3b375982-d25d-431d-8291-1e63f5c1296a", // The ID of your service instance.
+      onLoad: function(instance) { instance.render(); }
+    };
+    setTimeout(function(){
+      const t=document.createElement('script');
+      t.src="https://web-chat.global.assistant.watson.appdomain.cloud/versions/" + (window.watsonAssistantChatOptions.clientVersion || 'latest') + "/WatsonAssistantChatEntry.js";
+      document.head.appendChild(t);
+    });
+  </script>
+  </script>
+  
+
+</body>
+
+</html>

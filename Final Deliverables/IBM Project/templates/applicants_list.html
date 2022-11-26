@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+
+  <meta charset="UTF-8">
+  
+<link rel="apple-touch-icon" type="image/png" href="https://cpwebassets.codepen.io/assets/favicon/apple-touch-icon-5ae1a0698dcc2402e9712f7d01ed509a57814f994c660df9f7a952f3060705ee.png" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Charis+SIL:ital,wght@0,400;0,700;1,400;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+
+
+  <title>APPLICANTS LIST</title>  
+  
+  
+<style>
+html {
+  height: 100%;
+}
+body {
+  margin:0;
+  padding:0;
+  font-family: 'Charis SIL', serif;
+  background-color: #B9E3E6;
+}
+.nav{
+    display:flex;
+    justify-content:space-around;
+    align-items:center;
+    right: 0px;
+    height:60px;
+    background-color:#19787E;
+    position:fixed;
+    z-index:1;
+    width:100%;
+    transition:0.2s;
+}
+
+
+.logo{
+    z-index:3;
+  
+}
+
+.logo img{
+    align-items:center;
+    width:150px;
+    margin-top:20px;
+}
+
+
+
+
+
+@media screen and (max-width:1200px){
+    .menu-list {
+        width: 55%;
+    }
+}
+
+@media screen and (max-width:1000px){
+    .menu-list a {
+        font-size: 14px;
+    }
+}
+
+
+
+
+
+.nav2 {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 60px;
+   
+    background-color:#19787E;
+    position: fixed;
+    z-index: 1;
+    width: 100%;
+    transition: 0.2s;
+}
+
+#mynav {
+    top: 0px !important;
+}
+</style>
+
+  <script>
+  window.console = window.console || function(t) {};
+</script>
+
+  
+  
+  <script>
+  if (document.location.search.match(/type=embed/gi)) {
+    window.parent.postMessage("resize", "*");
+  }
+</script>
+
+
+</head>
+
+<body translate="no" >
+  <div class="nav" id="mynav">
+    <div class="logo">
+        <a href="{{ url_for('home') }}">
+            
+        </a>
+    </div>
+
+  
+
+
+</div>
+  
+  <form action = "" method ="POST"><br>
+    <!DOCTYPE html>
+<html lang="en" >
+
+<head>
+
+  <meta charset="UTF-8">
+  
+<link rel="apple-touch-icon" type="image/png" href="https://cpwebassets.codepen.io/assets/favicon/apple-touch-icon-5ae1a0698dcc2402e9712f7d01ed509a57814f994c660df9f7a952f3060705ee.png" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Charis+SIL:ital,wght@0,400;0,700;1,400;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+
+
+  <title>Login Page</title>
+  
+  
+  
+  
+<style>
+html {
+  height: 100%;
+}
+body {
+  margin:0;
+  padding:0;
+  font-family: 'Charis SIL', serif;
+  background-color: #B9E3E6;
+}
+.nav{
+    display:flex;
+    justify-content:space-around;
+    align-items:center;
+    right: 0px;
+    height:60px;
+    background-color:#19787E;
+    position:fixed;
+    z-index:1;
+    width:100%;
+    transition:0.2s;
+}
+
+
+.logo{
+    z-index:3;
+  
+}
+
+.logo img{
+    align-items:center;
+    width:150px;
+    margin-top:20px;
+}
+
+
+
+
+
+@media screen and (max-width:1200px){
+    .menu-list {
+        width: 55%;
+    }
+}
+
+@media screen and (max-width:1000px){
+    .menu-list a {
+        font-size: 14px;
+    }
+}
+
+
+table, th, td {
+  border: 1px solid whitesmoke;
+  border-collapse: collapse;
+}
+tr:hover {background-color: #D6EEEE;}
+
+
+.nav2 {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 60px;
+   
+    background-color:#19787E;
+    position: fixed;
+    z-index: 1;
+    width: 100%;
+    transition: 0.2s;
+}
+
+#mynav {
+    top: 0px !important;
+}
+</style>
+
+  <script>
+  window.console = window.console || function(t) {};
+</script>
+
+  
+  
+  <script>
+  if (document.location.search.match(/type=embed/gi)) {
+    window.parent.postMessage("resize", "*");
+  }
+</script>
+
+
+</head>
+
+<body translate="no" >
+  <div class="nav" id="mynav">
+    <div class="logo">
+        <a href="#">
+            
+        </a>
+    </div>
+
+  
+
+
+</div>
+  
+  <form action = "" method ="POST"><br>
+    <!-- <iframe src="https://ap1.ca.analytics.ibm.com/bi/?perspective=dashboard&amp;pathRef=.public_folders%2FSkill%252FJob%2BRecommender%2Fapplied_applicants&amp;closeWindowOnLastView=true&amp;ui_appbar=false&amp;ui_navbar=false&amp;shareMode=embedded&amp;action=view&amp;mode=dashboard&amp;subView=model000001848bd8c604_00000001" width="100%" height="700px" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen=""></iframe>  </form> -->
+    <center><h2>APPLICANTS APPLIED</h2></center>
+
+    <table style="width:100%">
+      <tr>
+        <th>fname</th>
+        <th>lname</th>
+        <th>degree</th>
+        <th>branch</th>
+        <th>tenth</th>
+        <th>twelfth</th>
+        <th>domain</th>
+        <th>ug_percent</th>
+        <th>email</th>
+        <th>phone</th>
+        <th>resume</th>
+      </tr>
+      <tr>
+        <td>Divya</td>
+        <td>Shree</td>
+        <td>Others</td>
+        <td>Computer Science and Engineering</td>
+        <td>90</td>
+        <td>86</td>
+        <td>Full Stack Development</td>
+        <td>85</td>
+        <td>divya@gmail.com</td>
+        <td>7654893421</td>
+        <td>divya_resume</td>
+      </tr>
+      <tr>
+      <tr>
+        <td>Loganayagi</td>
+        <td>P</td>
+        <td>B.E</td>
+        <td>Computer Science and Engineering</td>
+        <td>91</td>
+        <td>96</td>
+        <td>Artificial Intelligence</td>
+        <td>90</td>
+        <td>loga@gmail.com</td>
+        <td>7875342561</td>
+        <td>loganayagi_resume</td>
+      </tr>
+      <tr>
+        <td>Prathusha Devi</td>
+        <td>J S</td>
+        <td>3</td>
+        <td>2</td>
+        <td>98</td>
+        <td>92</td>
+        <td>web dev</td>
+        <td>90</td>
+        <td>jsprathusha@gmail.com</td>
+        <td>9876098543</td>
+        <td>prathusha_resume</td>
+      </tr>
+      <tr>
+        <td>Sri</td>
+        <td>Mathi</td>
+        <td>B.Tech</td>
+        <td>Information Technology</td>
+        <td>90</td>
+        <td>87</td>
+        <td>Data Science</td>
+        <td>80</td>
+        <td>sri@gmail.com</td>
+        <td>8765348921</td>
+        <td>sri_resume</td>
+      </tr>
+    </table>
+    </body>
+    </html>
+    
+    
+</body>
+
+</html>
+      </form>
+  
+
+</body>
+
+</html>

@@ -1,0 +1,395 @@
+
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+
+  <meta charset="UTF-8">
+  
+  <link href="https://fonts.googleapis.com/css2?family=Charis+SIL:ital,wght@0,400;0,700;1,400;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+
+  <title>Domain</title>
+  
+<style>
+body {
+    background-color: #B9E3E6;
+    font-family: 'Charis SIL', serif;
+}
+.nav{
+    display:flex;
+    justify-content:space-around;
+    align-items:center;
+    right: 0px;
+    height:60px;
+    background-color:#19787E;
+    position:fixed;
+    z-index:1;
+    width:100%;
+    transition:0.2s;
+}
+
+
+.logo{
+    z-index:3;
+    
+}
+
+.logo img{
+    align-items:center;
+    width:150px;
+    margin-top: 20px;
+   
+}
+
+.menu-list {
+    display: flex;
+    width: 45%;
+    justify-content:end;
+   
+}
+
+    .menu-list li {
+        list-style: none;
+    }
+
+    .menu-list a {
+        color: #B9E3E6;
+        text-decoration: none;
+        letter-spacing: 3px;
+        font-weight: bold;
+        font-size: 16px;
+        transition: 0.2s;
+        text-transform: uppercase;
+     
+    }
+
+        .menu-list a:hover {
+            color: #B9E3E6;
+            transition: 0.2s;
+        }
+
+.menu div{
+    width:25px;
+    height:3px;
+    margin:5px;
+    background-color:#B9E3E6;
+    z-index:3;
+}
+
+.menu{
+    display:none;
+    cursor:pointer;
+}
+.container {
+  position: absolute;
+  height: 300px;
+  width: 600px;
+  top: 60px;
+  margin-left:220px;
+  display: flex;
+  margin-top: 150px;
+}
+.heading{
+  margin-top: 65px;
+  padding: 20px;
+}
+.card {
+  display: flex;
+  height: 280px;
+  width: 200px;
+  background-color: #19787E;
+  border-radius: 10px;
+  box-shadow: -1rem 0 3rem #19787E;
+/*   margin-left: -50px;  box-shadow: -1rem 0 3rem #000E57;*/
+  transition: 0.4s ease-out;
+  position: relative;
+  left: 0px;
+  margin-left: 20px;
+}
+
+.card:not(:first-child) {
+    margin-left: -50px;
+}
+
+.card:hover {
+  transform: translateY(-20px);
+  transition: 0.4s ease-out;
+}
+
+.card:hover ~ .card {
+  position: relative;
+  left: 50px;
+  transition: 0.4s ease-out;
+}
+
+.title {
+  color: #B9E3E6;
+  font-weight: 300;
+  position: absolute;
+  left: 20px;
+  top: 15px;
+}
+
+.bar {
+  position: absolute;
+  top: 100px;
+  left: 20px;
+  height: 5px;
+  width: 150px;
+}
+
+.emptybar {
+  background-color: #19787E;
+  width: 100%;
+  height: 100%;
+}
+
+.filledbar {
+  position: absolute;
+  top: 0px;
+  z-index: 3;
+  width: 0px;
+  height: 100%;
+  background: #B9E3E6;
+  background-color: #B9E3E6;
+  transition: 0.6s ease-out;
+}
+
+.card:hover .filledbar {
+  width: 120px;
+  transition: 0.4s ease-out;
+}
+
+.circle {
+  position: absolute;
+  top: 150px;
+  left: calc(50% - 60px);
+}
+
+.stroke {
+  stroke: white;
+  stroke-dasharray: 360;
+  stroke-dashoffset: 360;
+  transition: 0.6s ease-out;
+}
+
+svg {
+  fill: #19787E;
+  stroke-width: 2px;
+}
+
+.card:hover .stroke {
+  stroke-dashoffset: 100;
+  transition: 0.6s ease-out;
+}
+@media screen and (max-width:1200px){
+    .menu-list {
+        width: 55%;
+    }
+}
+
+@media screen and (max-width:1000px){
+    .menu-list a {
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width:768px) {
+    html, body {
+        position: relative;
+    }
+
+    .menu-list {
+        position: absolute;
+        right: 0px;
+        height: 400px;
+        top: 60px;
+        background-color: #19787E;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        transform: translateY(-150%);
+        transition: transform 0.5s ease-in;
+        z-index: 1;
+    }
+
+        .menu-list li {
+            opacity: 0;
+        }
+
+    .menu {
+        display: block;
+    }
+
+    .nav {
+        background-color: #19787E;
+    }
+}
+    .nav-active{
+        transform: translateX(0%);
+    }
+
+    @keyframes navReveal{
+        from{
+            opacity:0;
+            transform: translateY(-50px);
+        }
+        to{
+            opacity:1;
+            transform: translateY(0px);
+        }
+    }
+
+    .toggle .line1{
+        transform: rotate(-45deg) translate(-5px, 6px);
+    }
+
+    .toggle .line2{
+        opacity:0;
+    }
+
+.toggle .line3 {
+    transform: rotate(45deg) translate(-5px, -6px);
+}
+
+
+.nav2 {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 60px;
+    font-family: 'Poppins', sans-serif;
+    background-color:#19787E;
+    position: fixed;
+    z-index: 1;
+    width: 100%;
+    transition: 0.2s;
+}
+
+#mynav {
+    top: 0px !important;
+}
+</style>
+
+  <script>
+  window.console = window.console || function(t) {};
+</script>
+
+  
+  
+  <script>
+  if (document.location.search.match(/type=embed/gi)) {
+    window.parent.postMessage("resize", "*");
+  }
+</script>
+
+
+</head>
+
+<body translate="no" >
+  
+<body>
+
+  <div class="nav" id="mynav">
+    <div class="logo">
+        <a href="{{ url_for('home') }}">
+            
+        </a>
+    </div>
+
+    <ul class="menu-list">
+     
+      
+        <li><a href="{{ url_for('learning_module') }}">Learning Modules</a></li>
+        
+    </ul>
+
+    <div class="menu">
+        <div class="line1"></div>
+        <div class="line2"></div>
+        <div class="line3"></div>
+    </div>
+
+
+</div>
+<form action = "" method ="POST">
+
+<div class="heading"><center><h1>Choose your Domain</h1></center></div>
+<br><br><div class="container">
+
+  <a href="{{ url_for('web_dev_job_list') }}">
+  <div class="card">
+    <h3 class="title">WEB <br>DEVELOPMENT</h3>
+    <div class="bar">
+      <div class="emptybar"></div>
+      <div class="filledbar"></div>
+    </div>
+    <div class="circle">
+      
+      <svg version="1.1" xmlns="http://www.w3.org/2000/svg">
+       
+      <circle class="stroke" cx="60" cy="60" r="50"/>
+      <text x="37" y="63" fill="white">APPLY</text>
+    </svg>
+    
+    </div>
+  </div>
+</a>
+<a href="{{ url_for('ai_job_list') }}">  
+  <div class="card">
+    <h3 class="title">ARTIFICIAL<br>INTELLIGENCE</h3>
+    <div class="bar">
+      <div class="emptybar"></div>
+      <div class="filledbar"></div>
+    </div>
+    <div class="circle">
+      <svg version="1.1" xmlns="http://www.w3.org/2000/svg">
+      <circle class="stroke" cx="60" cy="60" r="50"/>
+      <text x="37" y="63" fill="white">APPLY</text>
+    </svg>
+    </div>
+  </div>
+</a>
+<a href="{{ url_for('ds_job_list') }}">
+  <div class="card">
+    <h3 class="title">DATA<br>SCIENCE</h3>
+    <div class="bar">
+      <div class="emptybar"></div>
+      <div class="filledbar"></div>
+    </div>
+    <div class="circle">
+      <svg version="1.1" xmlns="http://www.w3.org/2000/svg">
+      <circle class="stroke" cx="60" cy="60" r="50"/>
+      <text x="37" y="63" fill="white">APPLY</text>
+    </svg>
+    </div>
+  </div>
+</a>
+<a href="{{ url_for('java_job_list') }}">
+  <div class="card">
+    <h3 class="title">FULL STACK DEVELOPER</h3>
+    <div class="bar">
+      <div class="emptybar"></div>
+      <div class="filledbar"></div>
+    </div>
+    <div class="circle">
+      <svg version="1.1" xmlns="http://www.w3.org/2000/svg">
+      <circle class="stroke" cx="60" cy="60" r="50"/>
+      <text x="37" y="63" fill="white">APPLY</text>
+    </svg>
+    </div>
+  </div>
+</a>
+</div>
+</form>
+</body>
+  
+  
+  
+  
+
+</body>
+
+</html>
+ 

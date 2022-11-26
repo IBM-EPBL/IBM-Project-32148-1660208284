@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Charis+SIL:ital,wght@0,400;0,700;1,400;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+
+    <!-- CSS only -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+<!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>  
+    <title>Apply Form</title>
+</head>
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: 'Charis SIL', serif;
+}
+.image-responsive{
+    width:100%;
+}
+
+.nav{
+    display:flex;
+    justify-content:space-around;
+    align-items:center;
+    right: 0px;
+    height:60px;
+    background-color:#19787E;
+    position:fixed;
+    z-index:1;
+    width:100%;
+    transition:0.2s;
+}
+
+
+
+
+@media screen and (max-width:768px) {
+    html, body {
+        position: relative;
+    }
+#mynav {
+    top:0px !important;
+}
+}
+
+/* page content*/
+
+/* @media (min-width: 1025px) {
+    .h-custom {
+    height: 155vh !important;
+    }
+    } */
+    .card-registration .select-input.form-control[readonly]:not([disabled]) {
+    font-size: 1rem;
+    line-height: 2.15;
+    padding-left: .75em;
+    padding-right: .75em;
+    }
+    .card-registration .select-arrow {
+    top: 13px;
+    }
+    
+    .gradient-custom-2 {
+    /* fallback for old browsers */
+   background-color: #B9E3E6;
+    
+    /* Chrome 10-25, Safari 5.1-6 */
+    background-color: #B9E3E6;
+
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background-color: #B9E3E6;
+    }
+    
+    .bg-indigo {
+      background-color:#19787E;
+    }
+    @media (min-width: 992px) {
+    .card-registration-2 .bg-indigo {
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    }
+    }
+    @media (max-width: 991px) {
+    .card-registration-2 .bg-indigo {
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    }
+    }
+
+    
+    /* submit btn*/
+  .submit {
+  position: relative;
+  display: inline-block;
+  padding: 10px 20px;
+  color: #B9E3E6;
+  font-size: 16px;
+  text-decoration: none;
+  text-transform: uppercase;
+  overflow: hidden;
+  transition: .5s;
+  letter-spacing: 4px;
+  margin-top: -5px;
+  left:60%;
+}
+
+.submit span {
+  position: absolute;
+  display: block;
+}
+
+.submit {
+  background-color:#19787E;
+  color: #B9E3E6;
+  border: 2px solid #B9E3E6;
+  font-family: 'Charis SIL', serif;
+  
+}
+
+.submit:hover {
+  background: #B9E3E6;
+  color:#19787E ;
+  border-radius: 5px;
+  box-shadow: 0 0 5px #B9E3E6,
+              0 0 25px #B9E3E6,
+              0 0 50px #B9E3E6,
+              0 0 100px #B9E3E6;
+}
+
+@media screen and (min-width:740px) {
+  .submit{
+    left: 75%;
+  }
+  
+}
+ /*recruiter heading*/
+ .waviy {
+      text-align: center;
+  position: relative;
+  font-size: 60px;
+}
+.waviy span {
+  position: relative;
+  display: inline-block;
+  color: #19787E;
+
+  
+}
+@keyframes waviy {
+  0%,40%,100% {
+    transform: translateY(0)
+  }
+  20% {
+    transform: translateY(-20px)
+  }
+}
+
+</style>
+<body>
+  
+    <div class="nav" id="mynav">
+            <div class="logo" style="margin-top: -40px;">
+                <a href="{{ url_for('applicant_domain') }}">
+                    
+                </a>
+            </div>
+        </div><br>
+         
+        <section class="h-100 h-custom gradient-custom-2">
+            <div class="container py-5 h-100">
+              <div class="row d-flex justify-content-center align-items-center h-100">
+                <div class="waviy">
+                  <span style="--i:1">A</span>
+                  <span style="--i:2">P</span>
+                  <span style="--i:3">P</span>
+                  <span style="--i:4">L</span>
+                  <span style="--i:5">Y</span>
+                  <span style="--i:6"></span>
+                  <span style="--i:7">H</span>
+                  <span style="--i:8">E</span>
+                  <span style="--i:9">R</span>
+                  <span style="--i:10">E</span>
+                 </div>
+                 <form action="" method="POST">
+                 <div class="col-12" style="box-shadow: 0 15px 25px #19787E; padding-left: 0%; padding-right: 0%;border-radius: 20px;">
+                  <div class="card card-registration card-registration-2" style="border-radius: 15px;">
+                    <div class="card-body p-0">
+                      <div class="row g-0">
+                        <div class="col-lg-6">
+                          <div class="p-5">
+                            <div class="design">
+                            <div class="row">
+                              <div class="col-md-6 mb-4 pb-2">
+          
+                                <div class="form-outline">
+                                  <input type="text" id="form3Examplev2" class="form-control form-control-lg" name="fname" required/>
+                                  <label class="form-label" for="form3Examplev2">First name</label>
+                                </div>
+          
+                              </div>
+                              <div class="col-md-6 mb-4 pb-2">
+          
+                                <div class="form-outline">
+                                  <input type="text" id="form3Examplev3" class="form-control form-control-lg" name="lname" required/>
+                                  <label class="form-label" for="form3Examplev3">Last name</label>
+                                </div>
+          
+                              </div>
+                            </div>   
+                              
+                            <div class="row">
+                              <div class="col-md-5 mb-4 pb-2">
+          
+                                <div class="form-outline form-white">
+                                  <select id="form3Examplev4" class="form-control form-control-lg" name="degree" required/>
+                                <option value="1">Select</option>
+                                <option value="B.E">B.E</option>
+                                <option value="B.Tech">B.Tech</option>
+                                <option value="M.E">M.E</option>
+                                <option value="M.Tech">M.Tech</option>
+                                <option value="Others">Others</option>
+                              </select>
+                                  <label class="form-label" for="form3Examplea4">Degree</label>
+                                </div>
+          
+                              </div>
+                              <div class="col-md-7 mb-4 pb-2">
+          
+                                <div class="form-outline form-white">
+                                  <select id="form3Examplev4" class="form-control form-control-lg" name="branch" required/>
+                                <option value="1">Select</option>
+                                <option value="Information Technology">Information Technology</option>
+                                <option value="Computer Science and Engineering">Computer Science and Engineering</option>
+                                <option value="Electronics and Communication Engineering">Electronics and Communication Engineering </option>
+                                <option value="Mechanical Engineering">Mechanical Engineering</option>
+                                <option value="Others">Others</option>
+                              </select>
+                                  <label class="form-label" for="form3Examplea5">Branch</label>
+                                </div>
+          
+                              </div>
+                            </div>
+     
+                            <div class="row">
+                              <div class="col-md-6 mb-4 pb-2">
+          
+                                <div class="form-outline">
+                                  <input type="text" id="form3Examplev2" class="form-control form-control-lg" name="tenth" required/>
+                                  <label class="form-label" for="form3Examplev2">10th percentage</label>
+                                </div>
+          
+                              </div>
+                              <div class="col-md-6 mb-4 pb-2">
+          
+                                <div class="form-outline">
+                                  <input type="text" id="form3Examplev3" class="form-control form-control-lg" name="twelfth" required/>
+                                  <label class="form-label" for="form3Examplev3">12th percentage</label>
+                                </div>
+          
+                              </div>
+                            </div>   
+    
+                            <div class="row">
+                              <div class="col-md-6 mb-4 pb-2">
+          
+                                <div class="form-outline">
+                                  <input type="text" id="form3Examplev2" class="form-control form-control-lg" name="domain" required/>
+                                  <label class="form-label" for="form3Examplev2">Domain</label>
+                                </div>
+          
+                              </div>
+                              <div class="col-md-6 mb-4 pb-2">
+          
+                                <div class="form-outline">
+                                  <input type="text" id="form3Examplev3" class="form-control form-control-lg" name="ug_percent" required/>
+                                  <label class="form-label" for="form3Examplev3">UG Percentage</label>
+                                </div>
+          
+                              </div>
+                            </div>  
+                          </div>
+                          </div>
+                        </div>
+                        <div class="col-lg-6 bg-indigo text-white">
+                          <div class="p-5">
+                            <div class="design1">
+          
+                              <div class="mb-4 pb-2">
+                                <div class="form-outline">
+                                  <input type="text" id="form3Examplev4" class="form-control form-control-lg" name="comp_name" required/>
+                                  <label class="form-label" for="form3Examplev4">Company Name</label>
+                                </div>
+                              </div>
+                            
+                              <div class="row">
+                                <div class="col-md-6 mb-4 pb-2">
+            
+                                  <div class="form-outline">
+                                    <input type="text" id="form3Examplev2" class="form-control form-control-lg" name="position" required/>
+                                    <label class="form-label" for="form3Examplev2">Position</label>
+                                  </div>
+            
+                                </div>
+                                <div class="col-md-6 mb-4 pb-2">
+            
+                                  <div class="form-outline">
+                                    <input type="text" id="form3Examplev3" class="form-control form-control-lg" name="phone" required/>
+                                    <label class="form-label" for="form3Examplev3">Phone Number</label>
+                                  </div>
+            
+                                </div>
+                              </div>  
+                          
+                              <div class="mb-4 pb-2">
+                                <div class="form-outline">
+                                  <input type="email" id="form3Examplev3" class="form-control form-control-lg" name="email" required/>
+                                  <label class="form-label" for="form3Examplev3">Email</label>
+                                </div> 
+                            </div>
+                              <div class="mb-4 pb-2">
+                                <input class="form-control" type="file" id="formFile" name="resume" required>
+                                <label for="formFile" class="form-label">Resume Upload</label>
+                             </div>
+                  </div>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <input type="submit" name="" required="" class="submit">
+                  
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                </form>
+              </div>
+            </div>
+          </section>
+
+          <script>
+            window.console = window.console || function(t) {};
+          </script> 
+            <script>
+            if (document.location.search.match(/type=embed/gi)) {
+              window.parent.postMessage("resize", "*");
+            }
+          </script>
+</body>
+</html>
+
+
+
+
+

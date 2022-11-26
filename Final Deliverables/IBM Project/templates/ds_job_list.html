@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+
+  <meta charset="UTF-8">
+  
+<link rel="apple-touch-icon" type="image/png" href="https://cpwebassets.codepen.io/assets/favicon/apple-touch-icon-5ae1a0698dcc2402e9712f7d01ed509a57814f994c660df9f7a952f3060705ee.png" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Charis+SIL:ital,wght@0,400;0,700;1,400;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+
+
+  <title>Login Page</title>
+  
+  
+  
+  
+<style>
+html {
+  height: 100%;
+}
+body {
+  margin:0;
+  padding:0;
+  font-family: 'Charis SIL', serif;
+  background-color: #B9E3E6;
+}
+.nav{
+    display:flex;
+    justify-content:space-around;
+    align-items:center;
+    right: 0px;
+    height:60px;
+    background-color:#19787E;
+    position:fixed;
+    z-index:1;
+    width:100%;
+    transition:0.2s;
+}
+
+
+.logo{
+    z-index:3;
+  
+}
+
+.logo img{
+    align-items:center;
+    width:150px;
+    margin-top:20px;
+}
+
+.menu-list {
+    display: flex;
+    width: 45%;
+    justify-content:end;
+   
+}
+
+    .menu-list li {
+        list-style: none;
+    }
+
+    .menu-list a {
+        color: #B9E3E6;
+        text-decoration: none;
+        letter-spacing: 3px;
+        font-weight: bold;
+        font-size: 16px;
+        transition: 0.2s;
+        text-transform: uppercase;
+     
+    }
+
+        .menu-list a:hover {
+            color: #B9E3E6;
+            transition: 0.2s;
+        }
+
+
+
+@media screen and (max-width:1200px){
+    .menu-list {
+        width: 55%;
+    }
+}
+
+@media screen and (max-width:1000px){
+    .menu-list a {
+        font-size: 14px;
+    }
+}
+
+table, th, td {
+  border: 1px solid whitesmoke;
+  border-collapse: collapse;
+}
+tr:hover {background-color: #D6EEEE;}
+
+
+
+.nav2 {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 60px;
+   
+    background-color:#19787E;
+    position: fixed;
+    z-index: 1;
+    width: 100%;
+    transition: 0.2s;
+}
+
+#mynav {
+    top: 0px !important;
+}
+</style>
+
+  <script>
+  window.console = window.console || function(t) {};
+</script>
+
+  
+  
+  <script>
+  if (document.location.search.match(/type=embed/gi)) {
+    window.parent.postMessage("resize", "*");
+  }
+</script>
+
+
+</head>
+
+<body translate="no" >
+  <div class="nav" id="mynav">
+    <div class="logo">
+        <a href="{{ url_for('applicant_domain') }}">
+            
+        </a>
+    </div>
+
+    <ul class="menu-list">
+     
+      
+      <li><a href="{{ url_for('apply_job') }}">Apply Here</a></li>
+      
+  </ul>
+  
+
+
+</div>
+  
+  <form action = "" method ="POST"><br>
+    <br>
+    <center><h2>DS JOB LIST</h2></center>
+    <table style="width:100%">
+      <tr>
+        <th>Comp_name</th>
+        <th>position</th>
+        <th>location</th>
+        <th>degree</th>
+        <th>job_type</th>
+        <th>tech_area</th>
+        <th>experience</th>
+        <th>job_desc</th>
+      </tr>
+      <tr>
+        <td>Albot Software</td>
+        <td>Data Science Engineer</td>
+        <td>Chennai</td>
+        <td>B.E/B.Tech</td>
+        <td>Full time</td>
+        <td>Data Science</td>
+        <td>2-3 years</td>
+        <td>Must be able to analyze data for actionable insights. Specific tasks include: Identifying the data-analytics problems that offer the greatest opportunities to the organization. Determining the correct data sets and variables.</td>
+      </tr>
+    
+      <tr>
+        <td>RMS Software</td>
+        <td>Software Trainee</td>
+        <td>Bangalore</td>
+        <td>B.E/B.Tech</td>
+        <td>Full time</td>
+        <td>Data Science</td>
+        <td>1 year</td>
+        <td>The software trainee's job responsibilities may include maintenance of existing software products, designing new software, and installation and customization of software. He may be asked to contribute to reports outlining the feasibility and cost-benefit analysis of new software.</td>
+      </tr>
+      
+      <tr>
+        <td>APJ Software</td>
+        <td>Delivery Head</td>
+        <td>Madurai</td>
+        <td>B.E/B.Tech</td>
+        <td>Internship</td>
+        <td>Data Science</td>
+        <td>No Experience</td>
+        <td>A service delivery manager is responsible for making sure that services are being seamlessly delivered to the clients of an organization. They are in charge of a variety of tasks, such as leading project teams, rectifying reliability issues, monitoring progress, tracking KPIs, and managing budgets.</td>
+      </tr>
+      
+      <tr>
+        <td>PMR Software</td>
+        <td>Junior Data Analyst</td>
+        <td>Coimbatore</td>
+        <td>B.E/B.Tech</td>
+        <td>Full time</td>
+        <td>Data Science</td>
+        <td>1 year</td>
+        <td>Junior data scientist should have the skills required to competently: build datasets, clean and manipulate data, make data accessible to users, perform advanced analytics, do modeling, present data statistics visually, and align data handling processes with the needs of an organization.</td>
+      </tr>
+      
+      <tr>
+        <td>Ace Software</td>
+        <td>Data Scientist</td>
+        <td>Chennai</td>
+        <td>B.E/B.Tech</td>
+        <td>Full time</td>
+        <td>Data Science</td>
+        <td>>3 years</td>
+        <td>We are looking for a Data Scientist to analyze large amounts of raw information to find patterns that will help improve our company. We will rely on you to build data products to extract valuable business insights.</td>
+      </tr>
+    </table>
+    
+</form>
+
+  
+  
+  
+  
+
+</body>
+
+</html>
